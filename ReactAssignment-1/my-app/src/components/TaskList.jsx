@@ -1,5 +1,5 @@
 // "use client";
-export function TaskList({ tasks }) {
+const TaskList=({ tasks })=> {
   return (
     <>
      <p style={{justifyContent:"center", alignItems:"center",display:"flex"}}> Task list is available</p>
@@ -13,3 +13,4 @@ export function TaskList({ tasks }) {
     </>
   );
 }
+export default TaskList;

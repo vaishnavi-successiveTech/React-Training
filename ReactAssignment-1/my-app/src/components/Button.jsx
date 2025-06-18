@@ -1,6 +1,5 @@
 "use client"
-export function Button({ text, color }) {
-
+const Button=({ text, color })=> {
   return (
     <>
       <button
@@ -10,4 +9,4 @@ export function Button({ text, color }) {
     </>
   );
 }
-
+export default Button;

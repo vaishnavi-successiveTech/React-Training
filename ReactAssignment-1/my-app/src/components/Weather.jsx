@@ -1,4 +1,4 @@
-function Weather({ temperature }) {
+const Weather=({ temperature })=>{
   let message;
   
   if (temperature > 25) {

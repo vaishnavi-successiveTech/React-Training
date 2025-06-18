@@ -1,6 +1,6 @@
 "use client"
 import { useState } from "react"
-export function Counter(){
+const Counter=()=>{
     const [count,setCount]=useState(0);
     const handleClick=()=>{
         setCount(count-1);
@@ -13,4 +13,4 @@ export function Counter(){
     </div>
     )
    }
-
+export default Counter;

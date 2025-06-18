@@ -1,10 +1,5 @@
 // components/UserCard.js
-export default function UserCard(props) {
-
-
-
-  
-
+const UserCard=(props)=>{
   return (
     <div className="cardStyle">
       <img src={props.avatarUrl} alt="User avatar" className="imageStyle" />
@@ -15,3 +10,4 @@ export default function UserCard(props) {
     </div>
   );
 }
+export default  UserCard;

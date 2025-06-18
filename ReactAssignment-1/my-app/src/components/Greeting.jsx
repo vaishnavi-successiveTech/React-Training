@@ -1,5 +1,5 @@
 
-export default function Greeting() {
+const Greetings=()=>{
     return(
         <div>
            <p id="greetingCss"> Hello,Next.js </p>
@@ -7,3 +7,4 @@ export default function Greeting() {
     )
 
 }
+export default Greetings;
