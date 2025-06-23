@@ -23,22 +23,22 @@ export default function RootLayout({ children }) {
       <div>
         <h2>Next.js Assignment-1</h2>
         <div className="parent-button">
-        <Link href="/assignment-1/question-1">
+        <Link href="/Assignment-1/question-1">
           <button>Question-1</button>
         </Link>{"  "}
-        <Link href="/assignment-1/question-2">
+        <Link href="/Assignment-1/question-2">
           <button>Question-2</button>
         </Link>{"  "}
-        <Link href="/assignment-1/question-3">
+        <Link href="/Assignment-1/question-3">
           <button>Question-3</button>
         </Link>{"  "}
-        <Link href="/assignment-1/question-4">
+        <Link href="/Assignment-1/question-4">
           <button>Question-4</button>
         </Link>{"  "}
-        <Link href="/assignment-1/question-5">
+        <Link href="/Assignment-1/question-5">
           <button>Question-5</button>
         </Link>{"  "}
-        <Link href="/assignment-1/question-6">
+        <Link href="/Assignment-1/question-6">
           <button>Question-6</button>
         </Link>{"  "}
         

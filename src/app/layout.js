@@ -25,13 +25,13 @@ export default function RootLayout({ children }) {
         <div style={{ padding: "20px" }}>
           <h1>Next.js Assignment Portal</h1>
           <nav className="assignment-nav">
-            <Link href="/assignment-1">
+            <Link href="/Assignment-1">
               <button>Assignment-1</button>
             </Link>{" "}
-            <Link href="/assignment-2">
+            <Link href="/Assignment-2">
               <button>Assignment-2</button>
             </Link>{" "}
-            <Link href="/assignment-3">
+            <Link href="/Assignment-3">
               <button>Assignment-3</button>
             </Link>
             {/* Add more assignments as needed */}
