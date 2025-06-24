@@ -1,7 +1,7 @@
 // app/layout.js
 import { Geist, Geist_Mono } from "next/font/google";
-import "./globals.css";
 import Link from "next/link";
+import "./globals.css"; 
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -20,24 +20,90 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en">
-      <body className={`${geistSans.variable} ${geistMono.variable}`}>
-        <div style={{ padding: "20px" }}>
-          <h1>Next.js Assignment Portal</h1>
-          <nav className="assignment-nav">
-            <Link href="/Assignment-1">
-              <button>Assignment-1</button>
-            </Link>{" "}
-            <Link href="/Assignment-2">
-              <button>Assignment-2</button>
-            </Link>{" "}
-            <Link href="/Assignment-3">
-              <button>Assignment-3</button>
-            </Link>
-            {/* Add more assignments as needed */}
-          </nav>
+    <html >
+      <body >
+        <div
+          style={{
+            display: "flex",
+            minHeight: "100vh",
+            fontFamily: "var(--font-geist-sans)",
+          }}
+        >
+          {/* Sidebar */}
+          <aside
+            style={{
+              width: "240px",
+              backgroundColor: "#1e293b",
+              color: "white",
+              padding: "20px",
+              display: "flex",
+              flexDirection: "column",
+            }}
+          >
+            <h2 style={{ fontSize: "22px", marginBottom: "20px" }}>Assignments</h2>
+            <nav style={{ display: "flex", flexDirection: "column", gap: "12px" }}>
+              <Link href="/Assignment-1">
+                <button
+                  style={{
+                    backgroundColor: "#3b82f6",
+                    color: "white",
+                    padding: "10px 16px",
+                    border: "none",
+                    borderRadius: "6px",
+                    textAlign: "left",
+                    fontWeight: "500",
+                    cursor: "pointer",
+                  }}
+                >
+                  Assignment 1
+                </button>
+              </Link>
+              <Link href="/Assignment-2">
+                <button
+                  style={{
+                    backgroundColor: "#3b82f6",
+                    color: "white",
+                    padding: "10px 16px",
+                    border: "none",
+                    borderRadius: "6px",
+                    textAlign: "left",
+                    fontWeight: "500",
+                    cursor: "pointer",
+                  }}
+                >
+                  Assignment 2
+                </button>
+              </Link>
+              {/* <Link href="/Assignment-3">
+                <button
+                  style={{
+                    backgroundColor: "#3b82f6",
+                    color: "white",
+                    padding: "10px 16px",
+                    border: "none",
+                    borderRadius: "6px",
+                    textAlign: "left",
+                    fontWeight: "500",
+                    cursor: "pointer",
+                  }}
+                >
+                  Assignment 3
+                </button> */}
+              {/* </Link> */}
+            </nav>
+          </aside>
+
+          {/* Main Content */}
+          <main
+            style={{
+              flex: 1,
+              padding: "40px",
+              backgroundColor: "#f4f6f8",
+            }}
+          >
+            {children}
+          </main>
         </div>
-        <main>{children}</main>
       </body>
     </html>
   );

@@ -19,7 +19,7 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en">
+   
       <div>
         <h2>Next.js Assignment-1</h2>
         <div className="parent-button">
@@ -43,10 +43,10 @@ export default function RootLayout({ children }) {
         </Link>{"  "}
         
        </div>
-        </div>
-        <body className={`${geistSans.variable} ${geistMono.variable}`}>
+
         {children}
-        </body>
-    </html>
+        </div>
+  
+       
   );
 }
