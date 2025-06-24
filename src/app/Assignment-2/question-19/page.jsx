@@ -1,4 +1,5 @@
-import TimerComponent from "@/components";
+import { TimerComponent } from "@/components";
+
 
 export default function Page() {
   return (

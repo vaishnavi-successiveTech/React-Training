@@ -1,4 +1,5 @@
-import ListofTasks from "@/components";
+import { ListofTasks } from "@/components";
+
 export default function Home() {
   return (
     <div>

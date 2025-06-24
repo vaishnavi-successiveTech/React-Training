@@ -1,7 +1,7 @@
 "use client";
 
 import SwitchLanguage from "@/components/SwitchLanguage";
-import { LanguageContext } from "@/context/LanguageContext";
+import { LanguageContext, LanguageProvider } from "@/context/LanguageContext";
 import { useContext } from "react";
 
 function Content() {
@@ -21,7 +21,7 @@ function Content() {
 export default function Question10Page() {
   return (
     <LanguageProvider>
-      <h2>Assignment-2: Question-10</h2>
+      <h2>Language Switcher </h2>
       <SwitchLanguage />
       <Content />
     </LanguageProvider>

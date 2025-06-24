@@ -4,7 +4,7 @@
 import useClipboard from "@/hooks/useClipboard";
 
 export default function CopyClipboard() {
-  const textToCopy = "This is copied using execCommand!";
+  const textToCopy = "Hey! It's me,your clipboard";
   const { copied, copyToClipboard } = useClipboard(textToCopy);
 
   return (
@@ -14,5 +14,5 @@ export default function CopyClipboard() {
       {copied && <p style={{ color: "green" }}>Copied!</p>}
     </div>
   );
-  
+
 }

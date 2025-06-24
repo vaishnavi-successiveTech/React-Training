@@ -4,8 +4,7 @@
 // Render the notification message in a <div> element.
 // After 5 seconds, clear the message to hide the notification.
 
-import Notification from "@/components";
-
+import { Notification } from "@/components";
 
 export default function HomeNotification(){
     return(

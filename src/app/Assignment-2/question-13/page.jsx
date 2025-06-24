@@ -1,4 +1,5 @@
-import Parent from "@/components";
+import { Parent } from "@/components";
+
 export default function Home() {
   return (
     <div>

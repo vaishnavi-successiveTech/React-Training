@@ -5,8 +5,7 @@
 // Add an input field where the user can specify a step value.
 // Update the count using the specified step value when the buttons are clicked.
 
-"use client"
-import Clock from "@/components";
+import { Clock } from "@/components";
 export default function HomePage() {
   return (
   <div>

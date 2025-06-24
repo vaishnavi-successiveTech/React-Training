@@ -1,9 +1,10 @@
-import SlideShow from "@/components";
+import { SlideShow } from "@/components";
+
 
 export default function HomeNotification(){
     return(
         <>
-    <SlideShow/>
+       <SlideShow/>
     </>
     )
 }

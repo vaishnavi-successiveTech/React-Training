@@ -30,7 +30,6 @@ export {
   VoteApp,
   ToDoList,
   TimerComponent,
-  ToDoList,
   SwitchLanguage,
   SwitchTheme,
   SlideShow,
@@ -43,6 +42,6 @@ export {
   ListofTasks,
   Child,
   Clock,
-  Counter
+  Counter,
 };
 

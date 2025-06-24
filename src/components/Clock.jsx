@@ -3,7 +3,7 @@
 // Use the useEffect hook to update the time state every second to display the current time.
 // Render the current time in a <p> element.
 // When the component unmounts, clear the interval to stop updating the time.
-
+"use client"
 import { useEffect, useState } from "react";
 const Clock=()=>{
     const[time,setTime]=useState(new Date().toLocaleTimeString());

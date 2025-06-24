@@ -6,7 +6,7 @@
 
 "use client";
 import { useContext } from "react";
-import { ThemeContext } from "../app/Assignment-2/question-9/ThemeContext";
+import { ThemeContext } from "../context/ThemeContext";
 export default function SwitchTheme() {
   const { theme, toggleTheme } = useContext(ThemeContext);
   return (

@@ -1,7 +1,7 @@
 
 "use client";
 import { SwitchTheme } from "@/components";
-import { ThemeProvider } from "./ThemeContext";
+import { ThemeProvider } from "../../../context/ThemeContext";
 
 
 export default function Question9() {

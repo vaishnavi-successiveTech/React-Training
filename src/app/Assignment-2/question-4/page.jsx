@@ -1,6 +1,4 @@
-
-import RandomNumberGenerator from "@/components";
-
+import { RandomNumberGenerator } from "@/components";
 export  default function HomePage(){
     return(
         <>
