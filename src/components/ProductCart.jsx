@@ -22,4 +22,5 @@ export default function ProductCart() {
       <h4>Total: ₹{totalPrice}</h4>
     </div>
   );
+  
 }

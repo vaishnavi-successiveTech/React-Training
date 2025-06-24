@@ -7,11 +7,9 @@ import { useState } from "react";
 export default function ToDoList() {
   const [todos, setTodos] = useState([]);
   const [input, setInput] = useState(""); // whatever the user give the input
-
   const addTodo = () => {
     // add new todo in the input list
     if (input.trim() === "") return;
-
     const newTodo = {
       id: Date.now(),
       text: input,

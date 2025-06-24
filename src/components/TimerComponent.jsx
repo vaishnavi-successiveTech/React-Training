@@ -2,7 +2,6 @@
 
 import { useState } from "react";
 import useTimer from "@/hooks/useTimer";
-
 export default function TimerComponent() {
   const [input, setInput] = useState("");
   const { time, isRunning, start, pause, reset } = useTimer();
@@ -10,7 +9,6 @@ export default function TimerComponent() {
   const handleStart = () => {
     start(input);
   };
-
   return (
     <div>
       <h2 style={{ display:"flex",justifyContent:"center",alignItems:"center", marginBottom: "10px" }}>CountDown In Sec</h2>

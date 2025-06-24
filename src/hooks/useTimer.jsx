@@ -4,7 +4,6 @@ export default function useTimer(initialTime = 0) {
   const [time, setTime] = useState(initialTime);
   const [isRunning, setIsRunning] = useState(false);
   const savedTime = useRef(initialTime);  // use Ref is used for set the intialTime to reset
-
   const start = (newTime) => {
     const validTime = parseInt(newTime || savedTime.current);
     if (!isNaN(validTime) && validTime > 0) {
@@ -13,7 +12,6 @@ export default function useTimer(initialTime = 0) {
       setIsRunning(true);
     }
   };
-
   const pause = () => {
     setIsRunning(false);
   };
@@ -22,7 +20,6 @@ export default function useTimer(initialTime = 0) {
     setIsRunning(false);
     setTime(savedTime.current);
   };
-
   useEffect(() => {
     let id;
     if (isRunning && time > 0) {

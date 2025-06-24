@@ -10,7 +10,6 @@ export default function StudentList() {
   const StudentsName = useMemo(() => {
     return students;
   }, [students]);
-
   // add student when button is clicked
   const addStudent = () => {
     if (input.trim() === "") return; // prevent empty entries

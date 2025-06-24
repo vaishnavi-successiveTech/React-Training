@@ -10,7 +10,6 @@ export function CartProvider({ children }) {
   const addToCart = (product) => {
     setCartItems((prev)=>{
       const exist=prev.find((items)=>items.id===product.id)
-
       if(exist){
         return prev.map((items)=>
           items.id===product.id
@@ -23,7 +22,6 @@ export function CartProvider({ children }) {
       }
        
     })
-
   };
   const removeFromCart = (id) => {
     setCartItems((prev) => prev.filter((item) => item.id !== id));

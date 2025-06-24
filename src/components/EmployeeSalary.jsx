@@ -56,4 +56,5 @@ export default function EmployeeSalary() {
       <p>Average Salary: ₹{averageSalary.toFixed(2)}</p>
     </div>
   );
+  
 }

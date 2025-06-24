@@ -1,5 +1,4 @@
 import { useState } from "react";
-
 export default function useLocalStorage(key, initialValue) {
   const [storedValue, setStoredValue] = useState(() => {
     try {
@@ -10,7 +9,6 @@ export default function useLocalStorage(key, initialValue) {
       return initialValue;
     }
   });
-
   const setValue = (value) => {
     try {
       setStoredValue(value);
@@ -19,7 +17,6 @@ export default function useLocalStorage(key, initialValue) {
       console.log("Set error", error);
     }
   };
-
   const removeValue = () => {
     try {
       localStorage.removeItem(key);

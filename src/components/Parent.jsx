@@ -21,5 +21,5 @@ export default function Parent(){
         <Child onReset={reset} count={count} onIncrement={increment}></Child>
         </div>
     )
-
+    
 }

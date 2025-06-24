@@ -7,7 +7,6 @@ const initialState = {
   SuperMario: 0,
   PubG: 0,
 };
-
 // create a reducer function for 
 // this is reducer function whu=iuch the useRedyucer will use it
 function reducer(state,action){
@@ -19,8 +18,7 @@ function reducer(state,action){
     case "PubG" :
         return {...state,PubG:state.PubG+1};
     default:
-        return state;
-        
+        return state;     
  }
 }
 // function VoteApp

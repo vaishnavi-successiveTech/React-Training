@@ -11,8 +11,6 @@ const products = [
 
 export default function ProductList() {
   const { addToCart } = useContext(CartContext);
-  
-
   return (
     <div>
       <h3>Products</h3>

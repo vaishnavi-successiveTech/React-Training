@@ -14,4 +14,5 @@ export default function CopyClipboard() {
       {copied && <p style={{ color: "green" }}>Copied!</p>}
     </div>
   );
+  
 }

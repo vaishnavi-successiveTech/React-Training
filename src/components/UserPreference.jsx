@@ -2,11 +2,9 @@
 
 import useLocalStorage from "@/hooks/useLocalStorage";
 import { useState } from "react";
-
 export default function UserPreference() {
   const [name, setNameInput] = useState("");
   const [storedName, setName, removeName] = useLocalStorage("username", "");
-
   return (
     <div>
       <h2>Store Data in Local storage</h2>

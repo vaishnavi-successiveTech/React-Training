@@ -7,11 +7,8 @@
 "use client";
 import { useContext } from "react";
 import { ThemeContext } from "../app/Assignment-2/question-9/ThemeContext";
-
-
 export default function SwitchTheme() {
   const { theme, toggleTheme } = useContext(ThemeContext);
-
   return (
     <div style={{ backgroundColor: theme === "light" ? "white" : "black", color: theme === "light" ? "black" : "white",
     minHeight: "100vh",

@@ -14,11 +14,9 @@ const imageList = [
   "/Images/image-8.jpeg",
   "/Images/images-9.jpeg",
 ];
-
 const SlideShow = () => {
   const [index, setIndex] = useState(0);
   const [play, setPlay] = useState(true);
-
   useEffect(() => {
     let slideInterval;
     if (play) {

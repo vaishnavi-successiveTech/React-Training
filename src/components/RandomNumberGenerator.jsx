@@ -14,6 +14,7 @@ const RandomNumberGenerator=()=>{
         console.log(num);
         setRandomNumber(num);
     }
+    
 return (
     <div>
         <h2> Random Number is generated:{randomNumber}</h2>
