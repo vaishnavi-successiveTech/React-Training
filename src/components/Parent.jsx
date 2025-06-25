@@ -2,7 +2,7 @@
 import { useCallback, useState } from "react";
 import Child from "./Child";
 
-export default function Parent(){
+const Parent=()=>{
     const[count,setCount]=useState(0);
 
     const increment=()=>{
@@ -21,5 +21,6 @@ export default function Parent(){
         <Child onReset={reset} count={count} onIncrement={increment}></Child>
         </div>
     )
-    
+
 }
+export default Parent;

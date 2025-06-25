@@ -1,9 +1,11 @@
 import { ListofTasks } from "@/components";
 
-export default function Home() {
+ const Home=()=> {
   return (
     <div>
+      <h2>Assignment-2: Question-14</h2>
       <ListofTasks />
     </div>
   );
 }
+export default Home;

@@ -22,7 +22,7 @@ function reducer(state,action){
  }
 }
 // function VoteApp
-export default function VoteApp(){
+ const VoteApp=()=>{
     const [votes,dispatch]=useReducer(reducer,initialState);
     return (
         <>
@@ -43,3 +43,4 @@ export default function VoteApp(){
         </>
     )
 }
+export default VoteApp;

@@ -2,7 +2,7 @@
 
 import { useState, useMemo } from "react";
 
-export default function EmployeeSalary() {
+const EmployeeSalary=()=> {
   const [employees, setEmployees] = useState([]);
   const [name, setName] = useState("");
   const [salary, setSalary] = useState("");
@@ -56,5 +56,7 @@ export default function EmployeeSalary() {
       <p>Average Salary: ₹{averageSalary.toFixed(2)}</p>
     </div>
   );
-  
+
 }
+
+export default EmployeeSalary;

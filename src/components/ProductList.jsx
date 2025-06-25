@@ -9,7 +9,7 @@ const products = [
   { id: 3, name: "Mango", price: 50 },
 ];
 
-export default function ProductList() {
+const ProductList=()=> {
   const { addToCart } = useContext(CartContext);
   return (
     <div>
@@ -23,3 +23,5 @@ export default function ProductList() {
     </div>
   );
 }
+
+export default  ProductList;

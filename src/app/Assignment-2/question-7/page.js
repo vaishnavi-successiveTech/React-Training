@@ -6,10 +6,12 @@
 
 import { Notification } from "@/components";
 
-export default function HomeNotification(){
+const HomeNotification=()=>{
     return(
         <>
+        <h2>Assignment-2: Question-7</h2>
     <Notification/>
     </>
     )
 }
+export default HomeNotification;

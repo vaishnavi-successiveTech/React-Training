@@ -5,11 +5,13 @@
 // Display the entered information below the input fields.
 
 import { PersonForm } from "@/components";
-export  default function HomePage(){
+const HomePage=()=>{
     return(
         <>
+        <h2>Assignment-2: Question-2</h2>
         <PersonForm/>
         
         </>
     )
 }
+export default HomePage;

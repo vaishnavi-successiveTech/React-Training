@@ -1,10 +1,10 @@
 
 "use client";
+
 import { SwitchTheme } from "@/components";
-import { ThemeProvider } from "../../../context/ThemeContext";
+import { ThemeProvider } from "@/context/ThemeContext";
 
-
-export default function Question9() {
+const Question9=()=> {
   return (
     <ThemeProvider>
       <h2>Assignment-2: Question-9</h2>
@@ -12,3 +12,4 @@ export default function Question9() {
     </ThemeProvider>
   );
 }
+export default Question9;

@@ -2,7 +2,7 @@
 
 import { useState, useMemo } from "react";
 
-export default function StudentList() {
+const StudentList=()=> {
   const [students, setStudents] = useState(["Anu", "Raj", "Neha"]);
   const [input, setInput] = useState(""); // input user take it 
 
@@ -38,3 +38,4 @@ export default function StudentList() {
     </div>
   );
 }
+export default StudentList;

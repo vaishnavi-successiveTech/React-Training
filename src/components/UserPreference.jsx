@@ -2,7 +2,7 @@
 
 import { useLocalStorage } from "@/hooks";
 import { useState } from "react";
-export default function UserPreference() {
+const UserPreference=()=> {
   const [name, setNameInput] = useState("");
   const [storedName, setName, removeName] = useLocalStorage("username", "");
   return (
@@ -29,3 +29,4 @@ export default function UserPreference() {
     </div>
   );
 }
+export default  UserPreference;

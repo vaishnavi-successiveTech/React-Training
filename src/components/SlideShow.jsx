@@ -1,4 +1,3 @@
-
 "use client";
 import { useEffect, useState } from "react";
 import Image from "next/image";
@@ -13,50 +12,54 @@ const imageList = [
   "/Images/Image-7.jpeg",
   "/Images/image-8.jpeg",
   "/Images/images-9.jpeg",
+  "/Images/image-10.jpeg",
 ];
-const SlideShow = () => {
+
+export default function SlideShow() {
   const [index, setIndex] = useState(0);
   const [play, setPlay] = useState(true);
+  const [intervalTime, setIntervalTime] = useState(3000); // 3 seconds default
+
   useEffect(() => {
-    let slideInterval;
-    if (play) {
-      slideInterval = setInterval(() => {
-        setIndex((preIndex) => (preIndex < imageList.length - 1 ? preIndex + 1 : 0));
-      }, 3000);
-    }
-    return () => clearInterval(slideInterval);
-  }, [play]);
+    if (!play) return;
+
+    const timer = setInterval(() => {
+      setIndex((prev) => (prev + 1) % imageList.length);
+    }, intervalTime);
+
+    return () => clearInterval(timer);
+  }, [play, intervalTime]);
 
   return (
-    <div style={{ width: "600px", margin: "0 auto" }}>
-      <div style={{ position: "relative", width: "100%", height: "400px" }}>
+    <div style={{ width: 600, margin: "auto" }}>
+      <div style={{ position: "relative", height: 400 }}>
         <Image
           src={imageList[index]}
-          
-
+          alt={`Slide ${index + 1}`}
           layout="fill"
           objectFit="cover"
           priority
         />
       </div>
-      <div style={{ textAlign: "center", marginTop: "10px" }}>
-        <button
-          onClick={() => setPlay((prev) => !prev)}
-          style={{
-            padding: "8px 16px",
-            fontSize: "16px",
-            cursor: "pointer",
-            borderRadius: "5px",
-            border: "1px solid #333",
-            backgroundColor: play ? "#f44336" : "#4caf50",
-            color: "#fff",
-          }}
-        >
+      <div style={{ marginTop: 10 }}>
+        <button onClick={() => setPlay(!play)}>
           {play ? "Pause" : "Play"}
         </button>
       </div>
+      <div style={{ marginTop: 10 }}>
+        <label>
+          Slide Interval (ms):
+          <input
+            type="number"
+            min={1000}
+            max={10000}
+            step={500}
+            value={intervalTime}
+            onChange={(e) => setIntervalTime(Number(e.target.value))}
+            disabled={!play}
+          />
+        </label>
+      </div>
     </div>
   );
-};
-
-export default SlideShow;
+}

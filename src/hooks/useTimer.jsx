@@ -1,6 +1,6 @@
 import { useEffect, useState, useRef } from "react";
 
-export default function useTimer(initialTime = 0) {
+ const useTimer=(initialTime = 0) =>{
   const [time, setTime] = useState(initialTime);
   const [isRunning, setIsRunning] = useState(false);
   const savedTime = useRef(initialTime);  // use Ref is used for set the intialTime to reset
@@ -34,3 +34,4 @@ export default function useTimer(initialTime = 0) {
 
   return { time, isRunning, start, pause, reset };
 }
+export default useTimer;

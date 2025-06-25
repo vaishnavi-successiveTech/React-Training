@@ -3,8 +3,7 @@
 "use client";
 
 import { useState } from "react";
-
-export default function ToDoList() {
+ const ToDoList=()=> {
   const [todos, setTodos] = useState([]);
   const [input, setInput] = useState(""); // whatever the user give the input
   const addTodo = () => {
@@ -74,3 +73,5 @@ export default function ToDoList() {
     </div>
   );
 }
+
+export default ToDoList;

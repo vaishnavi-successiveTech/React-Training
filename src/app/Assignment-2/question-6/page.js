@@ -6,10 +6,12 @@
 // Update the count using the specified step value when the buttons are clicked.
 
 import { Clock } from "@/components";
-export default function HomePage() {
+const HomePage=()=> {
   return (
   <div>
+    <h2>Assignment-2: Question-6</h2>
     <Clock/>
     </div>
   )
 }
+export default HomePage;

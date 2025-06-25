@@ -3,7 +3,7 @@
 import { useTimer } from "@/hooks";
 import { useState } from "react";
 
-export default function TimerComponent() {
+ const TimerComponent=()=> {
   const [input, setInput] = useState("");
   const { time, isRunning, start, pause, reset } = useTimer();
 
@@ -36,3 +36,4 @@ export default function TimerComponent() {
     </div>
   );
 }
+export default TimerComponent;

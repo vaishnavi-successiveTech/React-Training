@@ -5,17 +5,38 @@
 // Apply different styles and colors to components based on the selected theme.
 
 "use client";
-import { ThemeContext } from "@/context";
-import { useContext } from "react";
 
-export default function SwitchTheme() {
+import { useContext, useEffect } from "react";
+import { ThemeContext } from "@/context";
+
+const SwitchTheme = () => {
   const { theme, toggleTheme } = useContext(ThemeContext);
+
+  useEffect(() => {
+    document.body.className = theme;
+  }, [theme]);
+
   return (
-    <div style={{ backgroundColor: theme === "light" ? "white" : "black", color: theme === "light" ? "black" : "white",
-    minHeight: "100vh",
-    padding: "20px",}}>
-      <h3>Current Theme: {theme}</h3>
-      <button onClick={toggleTheme}>Switch Theme</button>
+    <div style={{ padding: "16px" }}>
+      {/* <h3 style={{ marginBottom: "10px" }}>Current Theme: {theme}</h3> */}
+      <button
+        onClick={toggleTheme}
+        style={{
+          backgroundColor: "#0ea5e9",
+          color: "white",
+          padding: "10px 16px",
+          border: "none",
+          borderRadius: "6px",
+          fontWeight: "500",
+          cursor: "pointer",
+          width: "100%",
+          textAlign: "left",
+        }}
+      >
+        Switch Theme
+      </button>
     </div>
   );
-}
+};
+
+export default SwitchTheme;

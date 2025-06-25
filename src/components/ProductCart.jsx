@@ -3,7 +3,7 @@
 import { useContext } from "react";
 import { CartContext } from "../context/CartContext";
 
-export default function ProductCart() {
+const ProductCart=()=> {
   const { cartItems, removeFromCart, totalPrice } = useContext(CartContext);
 
   return (
@@ -14,7 +14,7 @@ export default function ProductCart() {
       ) : (
         cartItems.map((item) => (
           <div key={item.id}>
-            <p>{item.name} - Quantity: {item.quantity} | ₹{item.price}</p>
+            <p>{item.name} - Quantity: <button onClick={item.quantity+1}> +</button>{item.quantity} <button onClick={item.quantity-1}>-</button>| ₹{item.price}</p>
             <button onClick={() => removeFromCart(item.id)}>Remove</button>
           </div>
         ))
@@ -22,5 +22,6 @@ export default function ProductCart() {
       <h4>Total: ₹{totalPrice}</h4>
     </div>
   );
-  
+
 }
+export default ProductCart;

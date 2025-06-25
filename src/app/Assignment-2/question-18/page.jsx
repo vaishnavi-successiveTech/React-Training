@@ -1,8 +1,10 @@
 import { UserPreference } from "@/components";
-export default function Page() {
+ const Page=()=> {
   return (
     <div>
+      <h2>Assignment-2: Question-18</h2>
       <UserPreference />
     </div>
   );
 }
+export default Page;

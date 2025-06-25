@@ -4,7 +4,7 @@
 import { useClipboard } from "@/hooks";
 
 
-export default function CopyClipboard() {
+const CopyClipboard=()=> {
   const textToCopy = "Hey! It's me,your clipboard";
   const { copied, copyToClipboard } = useClipboard(textToCopy);
 
@@ -17,3 +17,5 @@ export default function CopyClipboard() {
   );
 
 }
+
+export default CopyClipboard;

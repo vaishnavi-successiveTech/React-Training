@@ -2,7 +2,7 @@
 
 import { useState, useCallback } from "react";
 
-export default function ListofTasks() {
+const ListofTasks=()=> {
   const [todos, setTodos] = useState([]);
   const [input, setInput] = useState("");
 
@@ -67,5 +67,6 @@ export default function ListofTasks() {
       </ul>
     </div>
   );
-  
+
 }
+export default ListofTasks;

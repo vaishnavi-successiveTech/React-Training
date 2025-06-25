@@ -3,7 +3,7 @@
 
 import { useState } from "react";
 
-export default function useClipboard(text) {
+const useClipboard=(text) =>{
   const [copied, setCopied] = useState(false);
   const copyToClipboard = () => {
     const textArea = document.createElement("textarea");
@@ -24,3 +24,4 @@ export default function useClipboard(text) {
 
   return { copied, copyToClipboard };
 }
+export default  useClipboard;
