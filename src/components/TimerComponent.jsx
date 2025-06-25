@@ -1,7 +1,8 @@
 "use client";
 
+import { useTimer } from "@/hooks";
 import { useState } from "react";
-import useTimer from "@/hooks/useTimer";
+
 export default function TimerComponent() {
   const [input, setInput] = useState("");
   const { time, isRunning, start, pause, reset } = useTimer();

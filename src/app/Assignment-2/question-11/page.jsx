@@ -3,8 +3,6 @@
 import { ProductCart, ProductList } from "@/components";
 import { CartProvider } from "@/context/CartContext";
 
-
-
 export default function Question11Page() {
   return (
     <CartProvider>

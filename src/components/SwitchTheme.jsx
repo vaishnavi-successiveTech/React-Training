@@ -5,8 +5,9 @@
 // Apply different styles and colors to components based on the selected theme.
 
 "use client";
+import { ThemeContext } from "@/context";
 import { useContext } from "react";
-import { ThemeContext } from "../context/ThemeContext";
+
 export default function SwitchTheme() {
   const { theme, toggleTheme } = useContext(ThemeContext);
   return (

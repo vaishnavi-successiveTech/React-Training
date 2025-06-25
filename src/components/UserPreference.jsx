@@ -1,6 +1,6 @@
 "use client";
 
-import useLocalStorage from "@/hooks/useLocalStorage";
+import { useLocalStorage } from "@/hooks";
 import { useState } from "react";
 export default function UserPreference() {
   const [name, setNameInput] = useState("");

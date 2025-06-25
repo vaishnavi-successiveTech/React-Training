@@ -1,7 +1,8 @@
 // src/components/CopyClipboard.jsx
 "use client";
 
-import useClipboard from "@/hooks/useClipboard";
+import { useClipboard } from "@/hooks";
+
 
 export default function CopyClipboard() {
   const textToCopy = "Hey! It's me,your clipboard";
