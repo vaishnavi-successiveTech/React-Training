@@ -9,7 +9,7 @@ const initialState = {
 };
 // create a reducer function for 
 // this is reducer function whu=iuch the useRedyucer will use it
-function reducer(state,action){
+ const reducer=(state,action)=>{
  switch (action.type) {
     case "Minecraft":
         return {...state,Minecraft:state.Minecraft+1};

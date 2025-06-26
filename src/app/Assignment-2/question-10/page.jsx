@@ -5,7 +5,7 @@ import { SwitchLanguage } from "@/components";
 import LanguageProvider, { LanguageContext } from "@/context/LanguageContext";
 import { useContext } from "react";
 
-function Content() {
+const Content=()=> {
   const { language } = useContext(LanguageContext);
 
   return (

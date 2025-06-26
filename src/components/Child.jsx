@@ -1,4 +1,4 @@
-export default function Child({onReset,count,onIncrement}){
+const Child=({onReset,count,onIncrement})=>{
 return (<>
 <div  style={{ justifyContent:"center",alignContent:"center", boxShadow:" 0 4px 8px 0 rgba(0,0,0,0.2)",
          transition: "0.3s",padding: "2px 16px", maxWidth: "300px", margin:"auto"}}>
@@ -9,5 +9,5 @@ return (<>
 </div>
 </>)
 }
-
+export default Child;
 

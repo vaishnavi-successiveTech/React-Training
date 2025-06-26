@@ -1,11 +1,10 @@
 "use client";
-
 import { createContext, useState } from "react";
 export const ThemeContext = createContext();
 
-export function ThemeProvider({ children }) {
+const ThemeProvider=({ children })=> {
   const [theme, setTheme] = useState("light");
-  function toggleTheme() {
+  const toggleTheme=()=> {
     setTheme(prev => (prev === "light" ? "dark" : "light"));
   }
   return (
@@ -14,3 +13,4 @@ export function ThemeProvider({ children }) {
     </ThemeContext.Provider>
   );
 }
+export default ThemeProvider;

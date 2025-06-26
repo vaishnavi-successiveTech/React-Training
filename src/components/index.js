@@ -14,12 +14,12 @@ import ProductList from "./ProductList";
 import RandomNumberGenerator from "./RandomNumberGenerator";
 import SlideShow from "./SlideShow";
 import SwitchLanguage from "./SwitchLanguage";
-import SwitchTheme from "./SwitchTheme";
+import ThemeSwitcher from "./ThemeSwitcher";
 import TimerComponent from "./TimerComponent";
 import ToDoList from "./ToDoList";
 import VoteApp from "./VoteApp";
 import Counter from "./Counter";
-
+import ChildComponent from "./ChildComponent";
 export {
   CounterWithStep,
   StudentList,
@@ -30,7 +30,7 @@ export {
   ToDoList,
   TimerComponent,
   SwitchLanguage,
-  SwitchTheme,
+  ThemeSwitcher,
   SlideShow,
   RandomNumberGenerator,
   ProductCart,
@@ -42,5 +42,6 @@ export {
   Child,
   Clock,
   Counter,
+  ChildComponent,
 };
 

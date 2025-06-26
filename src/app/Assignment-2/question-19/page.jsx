@@ -1,6 +1,4 @@
 import { TimerComponent } from "@/components";
-
-
 const Page=()=> {
   return (
     <div>

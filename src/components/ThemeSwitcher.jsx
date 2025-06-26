@@ -5,13 +5,10 @@
 // Apply different styles and colors to components based on the selected theme.
 
 "use client";
-
-import { useContext, useEffect } from "react";
 import { ThemeContext } from "@/context";
-
-const SwitchTheme = () => {
+import { useContext, useEffect } from "react";
+const ThemeSwitcher = () => {
   const { theme, toggleTheme } = useContext(ThemeContext);
-
   useEffect(() => {
     document.body.className = theme;
   }, [theme]);
@@ -39,4 +36,4 @@ const SwitchTheme = () => {
   );
 };
 
-export default SwitchTheme;
+export default ThemeSwitcher;

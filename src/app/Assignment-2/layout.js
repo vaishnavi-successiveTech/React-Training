@@ -16,7 +16,7 @@ export const metadata = {
   description: "Next.js Assignment-2 Layout",
 };
 
-export default function Assignment2Layout({ children }) {
+const Assignment2Layout=({ children })=> {
   return (
     <div
       style={{
@@ -50,7 +50,6 @@ export default function Assignment2Layout({ children }) {
     return links;
   })()}
 </div>
-
       </div>
 
       <hr style={{ marginBottom: "20px" }} />
@@ -58,3 +57,5 @@ export default function Assignment2Layout({ children }) {
     </div>
   );
 }
+
+export default Assignment2Layout;

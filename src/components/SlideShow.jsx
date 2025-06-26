@@ -15,7 +15,7 @@ const imageList = [
   "/Images/image-10.jpeg",
 ];
 
-export default function SlideShow() {
+const SlideShow=()=> {
   const [index, setIndex] = useState(0);
   const [play, setPlay] = useState(true);
   const [intervalTime, setIntervalTime] = useState(3000); // 3 seconds default
@@ -63,3 +63,4 @@ export default function SlideShow() {
     </div>
   );
 }
+export default SlideShow;

@@ -38,14 +38,13 @@ const ListofTasks=()=> {
         placeholder="Enter a task"
       />
       <button onClick={addTodo}>Add</button>
-
       <ul>
         {todos.map((todo) => (
           <li key={todo.id} style={{ marginBottom: "8px" }}>
             <input
               type="checkbox"
               checked={todo.completed}
-              readOnly
+                  onChange={() => toggleComplete(todo.id)} 
             />
             <span
               style={{
@@ -67,6 +66,5 @@ const ListofTasks=()=> {
       </ul>
     </div>
   );
-
 }
 export default ListofTasks;

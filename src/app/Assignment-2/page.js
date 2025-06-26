@@ -1,9 +1,12 @@
 // app/assignment-2/page.jsx
-export default function Assignment2LandingPage() {
+// app/page.js
+
+ const HomePage=()=> {
   return (
     <div>
-      <h1>Welcome to Assignment-2</h1>
-      <p>Select a question from above .</p>
+      <h2>Welcome to Next.js Assignments</h2>
+      <p>This is the home page.</p>
     </div>
   );
 }
+export default HomePage;
