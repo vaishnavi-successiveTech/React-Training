@@ -20,7 +20,12 @@ import ToDoList from "./ToDoList";
 import VoteApp from "./VoteApp";
 import Counter from "./Counter";
 import ChildComponent from "./ChildComponent";
-import AboutPage from "./About";
+import Settings from "./Settings";
+import Profile from "./Profile";
+import Items from "./Items";
+import Login from "./Login";
+
+
 export {
   CounterWithStep,
   StudentList,
@@ -44,6 +49,9 @@ export {
   Clock,
   Counter,
   ChildComponent,
-  AboutPage,
+  Settings,
+  Profile,
+  Items,
+  Login,
 };
 

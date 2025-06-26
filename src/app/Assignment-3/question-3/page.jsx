@@ -14,7 +14,7 @@ const Home = () => {
           </div>
         </>
       ) : (
-        redirect('/Assignment-3/question-1')
+        redirect('/Assignment-3/question-2')
       )}
     </>
   );

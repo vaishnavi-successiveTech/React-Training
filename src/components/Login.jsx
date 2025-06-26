@@ -2,134 +2,78 @@
 
 import { useAuth } from "@/context/AuthContext";
 import { redirect } from "next/navigation";
-
-import { useState } from "react";
-
+import { useState, useEffect } from "react";
 
 const Login = () => {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
   const { loggedIn, login } = useAuth();
-//   const router = useRouter();
 
-  const onSubmitHandler = (e) => {
-    e.preventDefault(); // prevent form default submit reload
+  const [shouldRedirect, setShouldRedirect] = useState(false);
+
+  const handleLoginClick = () => {
     login(username, password);
     setPassword("");
-      redirect("/about")
+    setShouldRedirect(true);
   };
+
+  useEffect(() => {
+    if (loggedIn && shouldRedirect) {
+      
+      redirect("/about");
+    }
+  }, [loggedIn, shouldRedirect]);
+
   return (
-    <div>
-      <h1>Login</h1>
-      <p>{loggedIn ? `User logged in ${username} ` : "Please login"}
-      </p>
-       {loggedIn && (
-          <button onClick={goToAbout} style={{ marginLeft: "10px" }}>
-            Go to About Page
-          </button>
-        )}
-     
-      {!loggedIn && (
-        <form onSubmit={onSubmitHandler}>
-          <div>
-            <label>
-              UserName:
-              <input
-                type="text"
-                value={username}
-                onChange={(e) => setUsername(e.target.value)}
-                placeholder="Enter UserName"
-              />
-            </label>
-          </div>
-          <div
-            style={{
-              display: "flex",
-              justifyContent: "center",
-              alignItems: "center",
-              marginBottom: "10px",
-            }}
-          >
-            <label>
-              Password:
-              <input
-                type="password"
-                value={password}
-                onChange={(e) => setPassword(e.target.value)}
-                placeholder="password"
-              />
-            </label>
-          </div>
-          <button type="submit">Login</button>
-        </form>
-      )}
-      {loggedIn && <p>Welcome, {username}!</p>}
+    <div
+      style={{
+        justifyContent: "center",
+        alignContent: "center",
+        boxShadow: "0 4px 8px 0 rgba(0,0,0,0.2)",
+        transition: "0.3s",
+        padding: "2px 16px",
+        maxWidth: "300px",
+        margin: "auto",
+        marginTop: "50px",
+      }}
+    >
+      <h2 style={{ textAlign: "center" }}>Login</h2>
+
+      <div style={{ display: "flex", flexDirection: "column", gap: "10px" }}>
+        <label>
+          UserName:
+          <input
+            type="text"
+            value={username}
+            onChange={(e) => setUsername(e.target.value)}
+            placeholder="Enter UserName"
+            style={{ width: "100%", padding: "5px" }}
+          />
+        </label>
+
+        <label>
+          Password:
+          <input
+            type="password"
+            value={password}
+            onChange={(e) => setPassword(e.target.value)}
+            placeholder="password"
+            style={{ width: "100%", padding: "5px" }}
+          />
+        </label>
+
+        <div style={{ display: "flex", justifyContent: "space-between" }}>
+          <button onClick={handleLoginClick}>Log In</button>
+          <button onClick={() => { setUsername(""); setPassword(""); }}>Reset</button>
+        </div>
+
+        <div style={{ textAlign: "center", marginTop: "10px" }}>
+          {loggedIn ? `Welcome back !! ${username}` : "Please Login"}
+        </div>
+      </div>
     </div>
   );
 };
 
 export default Login;
 
-// "use client";
-
-// import { useAuth } from "@/context/AuthContext";
-// import { redirect } from "next/dist/server/api-utils";
-// import { useState } from "react";
-
-// export const Login = () => {
-//   const [username, setUsername] = useState("");
-//   const [password, setPassword] = useState("");
-//   const { loggedIn, login } = useAuth();
-
-//   const onSubmitHandler = () => {
-//     e.preventDefault();
-//     login(username, password);
-//     setPassword("");
-//     redirect("/About");
-//   };
-
-//   return (
-//     <>
-//       <div>
-//         <h1> Login</h1>
-//         <p> {loggedIn ? `User logged in ${username}` : "Please login"}</p>
-//         {!loggedIn && (
-//           <form onSubmit={onSubmitHandler}>
-//             <div>
-//               <label>
-//                 UserName:
-//                 <input
-//                   type="text"
-//                   value={username}
-//                   onChange={(e) => setUsername(e.target.value)}
-//                   placeholder="Enter UserName"
-//                 />
-//               </label>
-//             </div>
-//             <div
-//               style={{
-//                 display: "flex",
-//                 justifyContent: "center",
-//                 alignItems: "center",
-//                 marginBottom: "10px",
-//               }}
-//             >
-//               <label>
-//                 Password:
-//                 <input
-//                   type="password"
-//                   value={password}
-//                   onChange={(e) => setPassword(e.target.value)}
-//                   placeholder="password"
-//                 />
-//               </label>
-//             </div>
-//             <button type="submit">Login</button>
-//           </form>
-//         )}
-//         {loggedIn && <p> Welcome ,{username}!</p>}
-//       </div>
-//     </>
-//   );
-// };
-// export default Login;

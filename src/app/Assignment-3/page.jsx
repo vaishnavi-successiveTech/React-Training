@@ -1,5 +1,5 @@
 // app/page.js
-export default function HomePage() {
+ const HomePage=()=> {
   return (
     <div>
       <h2>Welcome to Next.js Assignments-3</h2>
@@ -7,5 +7,6 @@ export default function HomePage() {
     </div>
   );
 }
+export default HomePage;
 
   

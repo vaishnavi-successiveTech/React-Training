@@ -132,6 +132,9 @@ export default function RootLayout({ children }) {
                   About
                 </button>
               </Link>
+              <Link href="/Assignment-3/dashboard">
+  <button style={buttonStyle}>Dashboard</button>
+</Link>
 
             </nav>
             
@@ -151,3 +154,15 @@ export default function RootLayout({ children }) {
     </html>
   );
 }
+export const buttonStyle = {
+  backgroundColor: "#3b82f6",
+  color: "white",
+  padding: "10px 16px",
+  border: "none",
+  borderRadius: "6px",
+  textAlign: "left",
+  fontWeight: "500",
+  cursor: "pointer",
+  marginBottom: "10px",
+};
+
