@@ -20,6 +20,7 @@ import ToDoList from "./ToDoList";
 import VoteApp from "./VoteApp";
 import Counter from "./Counter";
 import ChildComponent from "./ChildComponent";
+import AboutPage from "./About";
 export {
   CounterWithStep,
   StudentList,
@@ -43,5 +44,6 @@ export {
   Clock,
   Counter,
   ChildComponent,
+  AboutPage,
 };
 

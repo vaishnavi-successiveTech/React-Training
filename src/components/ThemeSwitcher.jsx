@@ -28,6 +28,7 @@ const ThemeSwitcher = () => {
           cursor: "pointer",
           width: "100%",
           textAlign: "left",
+          maxWidth:"100"
         }}
       >
         Switch Theme
