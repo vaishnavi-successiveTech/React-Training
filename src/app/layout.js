@@ -135,6 +135,9 @@ export default function RootLayout({ children }) {
               <Link href="/Assignment-3/dashboard">
   <button style={buttonStyle}>Dashboard</button>
 </Link>
+ <Link href="/Assignment-4">
+  <button style={buttonStyle}>Assignment-4</button>
+</Link>
 
             </nav>
             
