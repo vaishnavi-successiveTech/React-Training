@@ -41,15 +41,16 @@ const Assignment3Layout = ({ children }) => {
       <h2 style={{ marginBottom: "16px", color: "#333" }}>
         Next.js Assignment-3
       </h2>
-
       <div style={{ marginBottom: "20px" }}>
-        
         
         <div className="parent-button">
         <Link href="/Assignment-3/question-1">
           <button>Question-1</button>
         </Link>{"  "}
         <Link href="/Assignment-3/question-3">
+          <button>Question-3</button>
+        </Link>{"  "}
+        <Link href="/Assignment-3/dashboard">
           <button>Question-3</button>
         </Link>{"  "}
         <Link href="/Assignment-3/question-6">
