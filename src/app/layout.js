@@ -1,6 +1,7 @@
 // app/layout.js
 import { Geist, Geist_Mono } from "next/font/google";
 import Link from "next/link";
+<<<<<<< HEAD
 import "./globals.css";
 
 import { ChildComponent, ThemeSwitcher } from "@/components";
@@ -8,6 +9,9 @@ import ThemeProvider from "@/context/ThemeContext";
 import { AuthContextProvider } from "@/context/AuthContext";
 
 
+=======
+import "./globals.css"; 
+>>>>>>> a329dfdc244b51c9ec3d98a3139c4efac550c8c2
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -26,8 +30,13 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
+<<<<<<< HEAD
     <html>
       <body>
+=======
+    <html >
+      <body >
+>>>>>>> a329dfdc244b51c9ec3d98a3139c4efac550c8c2
         <div
           style={{
             display: "flex",
@@ -46,6 +55,7 @@ export default function RootLayout({ children }) {
               flexDirection: "column",
             }}
           >
+<<<<<<< HEAD
             <h2 style={{ fontSize: "22px", marginBottom: "20px" }}>
               Assignments
             </h2>
@@ -68,6 +78,10 @@ export default function RootLayout({ children }) {
 
              
 
+=======
+            <h2 style={{ fontSize: "22px", marginBottom: "20px" }}>Assignments</h2>
+            <nav style={{ display: "flex", flexDirection: "column", gap: "12px" }}>
+>>>>>>> a329dfdc244b51c9ec3d98a3139c4efac550c8c2
               <Link href="/Assignment-1">
                 <button
                   style={{
@@ -100,7 +114,11 @@ export default function RootLayout({ children }) {
                   Assignment 2
                 </button>
               </Link>
+<<<<<<< HEAD
               <Link href="/Assignment-3">
+=======
+              {/* <Link href="/Assignment-3">
+>>>>>>> a329dfdc244b51c9ec3d98a3139c4efac550c8c2
                 <button
                   style={{
                     backgroundColor: "#3b82f6",
@@ -114,6 +132,7 @@ export default function RootLayout({ children }) {
                   }}
                 >
                   Assignment 3
+<<<<<<< HEAD
                 </button>
               </Link>
               <Link href="/about">
@@ -149,6 +168,23 @@ export default function RootLayout({ children }) {
           </ThemeProvider>
 
          
+=======
+                </button> */}
+              {/* </Link> */}
+            </nav>
+          </aside>
+
+          {/* Main Content */}
+          <main
+            style={{
+              flex: 1,
+              padding: "40px",
+              backgroundColor: "#f4f6f8",
+            }}
+          >
+            {children}
+          </main>
+>>>>>>> a329dfdc244b51c9ec3d98a3139c4efac550c8c2
         </div>
       </body>
     </html>
