@@ -36,32 +36,38 @@ const Assignment3Layout = ({ children }) => {
       style={{
         fontFamily: "sans-serif", // optional: or use geistSans.variable
         padding: "20px",
-      }}
-    >
+      }}  >
       <h2 style={{ marginBottom: "16px", color: "#333" }}>
         Next.js Assignment-3
       </h2>
       <div style={{ marginBottom: "20px" }}>
-        
-        <div className="parent-button">
-        <Link href="/Assignment-3/question-1">
-          <button>Question-1</button>
-        </Link>{"  "}
-        <Link href="/Assignment-3/question-3">
-          <button>Question-3</button>
-        </Link>{"  "}
-        <Link href="/Assignment-3/dashboard">
-          <button>Question-3</button>
-        </Link>{"  "}
-        <Link href="/Assignment-3/question-6">
-          <button>Question-6</button>
-        </Link>{"  "}
-        </div>
-        
+      <div className="parent-button">
+
+<div className="parent-button">
+  <Link href="/Assignment-3/question-1">
+    <button>Ques-1</button>
+  </Link>
+  <Link href="/Assignment-3/question-2">
+    <button>Ques-2</button>
+  </Link>
+  <Link href="/Assignment-3/question-3">
+    <button>Ques-3</button>
+  </Link>
+  <Link href="/Assignment-3/question-4">
+    <button>Ques-4</button>
+  </Link>
+  <Link href="/Assignment-3/dashboard">
+    <button>Ques-5</button>
+  </Link>
+  <Link href="/Assignment-3/question-6">
+    <button>Ques-6</button>
+  </Link>
+</div>
+
+</div>
+
       </div>
-
       <hr style={{ marginBottom: "20px" }} />
-
       {children}
     </div>
   );

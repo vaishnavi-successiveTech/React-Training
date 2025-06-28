@@ -1,22 +1,29 @@
 "use client";
 import AboutPage from "@/app/about/page";
-import { useAuth } from "@/context/AuthContext";
+
+import Link from "next/link";
 import { redirect } from "next/navigation";
 
 const Home = () => {
-  const { loggedIn, login } = useAuth();
+  
   return (
     <>
-      {loggedIn ? (
-        <>
-          <div>
-            <AboutPage />
-          </div>
-        </>
-      ) : (
-        redirect('/Assignment-3/question-2')
-      )}
+    
+    <Link href={"/"} style={buttonStyle}> Home </Link>
+    <Link href={"/about" } style={buttonStyle}> About </Link>
     </>
   );
+};
+const buttonStyle = {
+  backgroundColor: "#3b82f6",
+  color: "white",
+  padding: "10px 16px",
+  border: "none",
+  borderRadius: "6px",
+  textAlign: "left",
+  fontWeight: "500",
+  cursor: "pointer",
+  marginRight: "10px",
+  marginBottom: "10px",
 };
 export default Home;

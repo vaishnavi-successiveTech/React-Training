@@ -1,17 +1,15 @@
-// app/page.js
- const HomePage=()=> {
+"use client";
+import { useAuth } from "@/context/AuthContext";
+
+const Assignment3Page = () => {
+  const { loggedIn } = useAuth();
+
   return (
     <div>
-<<<<<<< HEAD:src/app/Assignment-3/page.jsx
-      <h2>Welcome to Next.js Assignments-3</h2>
-      <p>Click on any assignment above to get started!</p>
-=======
-      <h2>Welcome to Next.js Assignments</h2>
-      <p>CClick On Assignments</p>
->>>>>>> a329dfdc244b51c9ec3d98a3139c4efac550c8c2:src/app/page.js
+      <h2>This is Assignment 3</h2>
+      {loggedIn && <p>You are logged in. Welcome to the main page!</p>}
     </div>
   );
-}
-export default HomePage;
+};
 
-  
+export default Assignment3Page;
