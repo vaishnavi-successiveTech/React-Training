@@ -1,14 +1,10 @@
 "use client";
 import AboutPage from "@/app/about/page";
-
 import Link from "next/link";
 import { redirect } from "next/navigation";
-
 const Home = () => {
-  
   return (
     <>
-    
     <Link href={"/"} style={buttonStyle}> Home </Link>
     <Link href={"/about" } style={buttonStyle}> About </Link>
     </>

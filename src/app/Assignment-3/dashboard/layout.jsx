@@ -1,6 +1,5 @@
 // app/Assignment-3/dashboard/layout.js
 import Link from "next/link";
-
 const DashboardLayout=({ children })=> {
   return (
     <div style={{ padding: "20px" }}>
@@ -21,7 +20,6 @@ const DashboardLayout=({ children })=> {
     </div>
   );
 }
-
 const navBtn = {
   marginRight: "10px",
   padding: "10px 16px",
@@ -31,5 +29,4 @@ const navBtn = {
   borderRadius: "5px",
   cursor: "pointer",
 };
-
 export default DashboardLayout;

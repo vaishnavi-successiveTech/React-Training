@@ -1,7 +1,5 @@
 //child should have login button
 "use client"
-
-
 import { useAuth } from "@/context/AuthContext";
 import { redirect } from "next/navigation";
 import { useEffect, useState } from "react";
@@ -12,7 +10,6 @@ const [password,setPassword]=useState("");
  const [shouldRedirect, setShouldRedirect] = useState(false);
 
 const { loggedIn, login } = useAuth();
-
 const handleLoginClick = () => {
   login(username, password); // pass as strings
    setShouldRedirect(true);

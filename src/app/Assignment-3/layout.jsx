@@ -1,22 +1,18 @@
 // app/Assignment-3/layout.js
 import { Geist, Geist_Mono } from "next/font/google";
 import Link from "next/link";
-
 const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],
 });
-
 const geistMono = Geist_Mono({
   variable: "--font-geist-mono",
   subsets: ["latin"],
 });
-
 export const metadata = {
   title: "Assignment-3",
   description: "Next.js Assignment-3 Layout",
 };
-
 const buttonStyle = {
   backgroundColor: "#3b82f6",
   color: "white",
@@ -29,12 +25,11 @@ const buttonStyle = {
   marginRight: "10px",
   marginBottom: "10px",
 };
-
 const Assignment3Layout = ({ children }) => {
   return (
     <div
       style={{
-        fontFamily: "sans-serif", // optional: or use geistSans.variable
+        fontFamily: "sans-serif", 
         padding: "20px",
       }}  >
       <h2 style={{ marginBottom: "16px", color: "#333" }}>
@@ -42,7 +37,6 @@ const Assignment3Layout = ({ children }) => {
       </h2>
       <div style={{ marginBottom: "20px" }}>
       <div className="parent-button">
-
 <div className="parent-button">
   <Link href="/Assignment-3/question-1">
     <button>Ques-1</button>
@@ -63,14 +57,11 @@ const Assignment3Layout = ({ children }) => {
     <button>Ques-6</button>
   </Link>
 </div>
-
 </div>
-
       </div>
       <hr style={{ marginBottom: "20px" }} />
       {children}
     </div>
   );
 };
-
 export default Assignment3Layout;

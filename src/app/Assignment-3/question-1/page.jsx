@@ -3,14 +3,12 @@ import { ChildComponent } from "@/components";
 import { AuthContextProvider } from "@/context/AuthContext";
 import { useAuth } from "@/context/AuthContext";
 import { redirect } from "next/navigation";
-
 const Home = () => {
   const { loggedIn, login } = useAuth();
   return (
     <>
       {loggedIn ? (
          redirect('/Assignment-3')
-        
       ) : (
         <>
           <div>
@@ -23,7 +21,6 @@ const Home = () => {
       </AuthContextProvider>
           </div>
         </>
-       
       )}
     </>
   );
