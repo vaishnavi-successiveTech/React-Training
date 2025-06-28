@@ -5,7 +5,7 @@
   return (
     <div>
       <h2>Welcome to Next.js Assignments</h2>
-      <p>This is the home page.</p>
+      <p>This is the home page of assignment-2</p>
     </div>
   );
 }

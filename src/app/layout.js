@@ -2,7 +2,6 @@ import { Geist, Geist_Mono } from "next/font/google";
 import Link from "next/link";
 import "./globals.css";
 
-import { AuthContextProvider } from "@/context/AuthContext";
 import { ThemeSwitcher } from "@/components";
 import ThemeProvider from "@/context/ThemeContext";
 import LanguageProvider from "@/context/LanguageContext";
@@ -15,45 +14,41 @@ export const metadata = {
 const RootLayout = ({ children }) => {
   return (
     <html lang="en">
-      <body style={{ display: "flex", minHeight: "100vh" }}>
-        {/* Sidebar */}
-        <aside style={sidebarStyle}>
-          <h2 style={{ fontSize: "22px", marginBottom: "20px" }}>Assignments</h2>
-          <nav style={{ display: "flex", flexDirection: "column", gap: "12px" }}>
-            <Link href="/" style={linkStyle}>Home</Link>
-            <Link href="/Assignment-1" style={linkStyle}>Assignment 1</Link>
-            <Link href="/Assignment-2" style={linkStyle}>Assignment 2</Link>
-            <Link href="/Assignment-3" style={linkStyle}>Assignment 3</Link>
-            <Link href="/Assignment-4" style={linkStyle}>Assignment 4</Link>
-            <Link href="/Assignment-5" style={linkStyle}>Assignment 5</Link>
-            <Link href="/Assignment-6" style={linkStyle}>Assignment 6</Link>
+      <ThemeProvider>
+        <body style={bodyStyle}>
+          {/* Sidebar */}
+          <aside style={sidebarStyle}>
+            <h2 style={{ fontSize: "22px", marginBottom: "20px" }}>Assignments</h2>
+            <nav style={{ display: "flex", flexDirection: "column", gap: "12px" }}>
+              <Link href="/" style={linkStyle}>Home</Link>
+              <Link href="/Assignment-1" style={linkStyle}>Assignment 1</Link> {" "}
+              <Link href="/Assignment-2" style={linkStyle}>Assignment 2</Link>
+            </nav>
+          </aside>
 
-            <hr style={{ margin: "20px 0" }} />
-
-            <Link href="/about" style={linkStyle}>About</Link>
-            <Link href="/dashboard" style={linkStyle}>Dashboard</Link>
-            <Link href="/profile" style={linkStyle}>Profile</Link>
-            <Link href="/settings" style={linkStyle}>Settings</Link>
-          </nav>
-        </aside>
-
-        {/* Main content */}
-        <main style={mainContentStyle}>
-          <ThemeProvider>
+          {/* Main content */}
+          <main style={mainContentStyle}>
             <ThemeSwitcher />
             <LanguageProvider>
-              <AuthContextProvider>{children}</AuthContextProvider>
+              {children}
             </LanguageProvider>
-          </ThemeProvider>
-        </main>
-      </body>
+          </main>
+        </body>
+      </ThemeProvider>
     </html>
   );
 };
 
+// Styling
+const bodyStyle = {
+  display: "flex",
+  minHeight: "100vh",
+  margin: 0,
+};
+
 const sidebarStyle = {
   width: "240px",
-  backgroundColor: "#1e293b",
+  backgroundColor: "#1e293b", 
   color: "white",
   padding: "20px",
   display: "flex",
@@ -61,7 +56,6 @@ const sidebarStyle = {
 };
 
 const linkStyle = {
-  backgroundColor: "#3b82f6",
   color: "white",
   padding: "10px 16px",
   border: "none",
@@ -75,7 +69,6 @@ const linkStyle = {
 const mainContentStyle = {
   flex: 1,
   padding: "40px",
-  backgroundColor: "#f4f6f8",
 };
 
 export default RootLayout;

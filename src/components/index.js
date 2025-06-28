@@ -19,7 +19,6 @@ import TimerComponent from "./TimerComponent";
 import ToDoList from "./ToDoList";
 import VoteApp from "./VoteApp";
 import Counter from "./Counter";
-import ChildComponent from "./ChildComponent";
 export {
   CounterWithStep,
   StudentList,
@@ -42,6 +41,6 @@ export {
   Child,
   Clock,
   Counter,
-  ChildComponent,
+ 
 };
 
