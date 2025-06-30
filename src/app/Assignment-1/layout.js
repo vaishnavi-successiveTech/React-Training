@@ -16,6 +16,7 @@ export const metadata = {
 };
 const RootLayout = ({ children }) =>{
   return (
+
       <div>
         <h2>Next.js Assignment-1</h2>
         <div className="parent-button">
@@ -38,6 +39,7 @@ const RootLayout = ({ children }) =>{
           <button>Question-6</button>
         </Link>{"  "}
        </div>
+
         {children}
         </div>
   );

@@ -2,8 +2,10 @@
  const HomePage=()=> {
   return (
     <div>
-      <h2>Welcome to Next.js Assignments-3</h2>
-      <p>Click on any assignment above to get started!</p>
+
+      <h2>Welcome to Next.js Assignments</h2>
+      <p>CClick On Assignments</p>
+
     </div>
   );
 }

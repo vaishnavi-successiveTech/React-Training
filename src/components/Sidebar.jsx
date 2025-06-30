@@ -9,8 +9,8 @@ const routes = [
   { text: "Assignment 1", href: "/Assignment-1" },
   { text: "Assignment 2", href: "/Assignment-2" },
   { text: "Assignment 3", href: "/Assignment-3" },
+   { text: "Assignment 4", href: "/Assignment-4" },
   { text: "Dashboard", href: "/Assignment-3/dashboard" },
-  { text: "Assignment 4", href: "/Assignment-4" },
   { text: "About", href: "/about" },
 ];
 
