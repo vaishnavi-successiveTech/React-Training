@@ -26,9 +26,10 @@ const ThemeSwitcher = () => {
           borderRadius: "6px",
           fontWeight: "500",
           cursor: "pointer",
-          width: "100%",
+          width: "auto",
           textAlign: "left",
           maxWidth:"100"
+
         }}
       >
         Switch Theme

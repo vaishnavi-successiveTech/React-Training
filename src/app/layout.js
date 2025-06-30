@@ -2,8 +2,6 @@
 import "./globals.css";
 import { Geist, Geist_Mono } from "next/font/google";
 import Sidebar from "@/components/Sidebar"; 
-import ThemeProvider from "@/context/ThemeContext";
-import { AuthContextProvider } from "@/context/AuthContext";
 
 // If you use any context, import it:
 // import ThemeProvider from "@/context/ThemeContext";
@@ -19,10 +17,10 @@ const geistMono = Geist_Mono({
   variable: "--font-geist-mono",
 });
 
-// export const metadata = {
-//   title: "Next.js Assignments",
-//   description: "Multiple assignments using Next.js",
-// };
+export const metadata = {
+  title: "Next.js Assignments",
+  description: "Multiple assignments using Next.js",
+};
 
 export default function RootLayout({ children }) {
   return (
@@ -35,8 +33,8 @@ export default function RootLayout({ children }) {
         }}
       >
         {/* If you want to wrap with providers, uncomment these lines: */}
-        <ThemeProvider>
-        <AuthContextProvider>
+        {/* <ThemeProvider> */}
+        {/* <AuthContextProvider> */}
         <div style={{ display: "flex", minHeight: "100vh" }}>
           <Sidebar />
           <main
@@ -49,8 +47,8 @@ export default function RootLayout({ children }) {
             {children}
           </main>
         </div>
-        </AuthContextProvider>
-        </ThemeProvider>
+        {/* </AuthContextProvider> */}
+        {/* </ThemeProvider> */}
       </body>
     </html>
   );

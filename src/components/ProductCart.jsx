@@ -14,7 +14,7 @@ const ProductCart=()=> {
       ) : (
         cartItems.map((item) => (
           <div key={item.id}>
-            <p>{item.name} - Quantity: <button onClick={item.quantity+1}> +</button>{item.quantity} <button onClick={item.quantity-1}>-</button>| ₹{item.price}</p>
+            <p>{item.name} - ₹{item.price}</p>
             <button onClick={() => removeFromCart(item.id)}>Remove</button>
           </div>
         ))
