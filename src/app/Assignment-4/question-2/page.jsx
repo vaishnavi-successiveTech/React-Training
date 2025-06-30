@@ -1,4 +1,5 @@
-import FormInput from "@/components/FormInput";
+import { FormInput } from "@/components";
+
 
 
 const HomePage=()=>{return(
