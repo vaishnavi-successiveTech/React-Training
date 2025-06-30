@@ -19,12 +19,12 @@ import TimerComponent from "./TimerComponent";
 import ToDoList from "./ToDoList";
 import VoteApp from "./VoteApp";
 import Counter from "./Counter";
+
 import ChildComponent from "./ChildComponent";
 import Settings from "./Settings";
 import Profile from "./Profile";
 import Items from "./Items";
 import Login from "./Login";
-
 
 export {
   CounterWithStep,

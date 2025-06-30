@@ -22,6 +22,10 @@ const RootLayout = ({ children }) => {
               <Link href="/Assignment-1" style={linkStyle}>Assignment 1</Link> 
               <Link href="/Assignment-2" style={linkStyle}>Assignment 2</Link>
               <Link href="/Assignment-3" style={linkStyle}>Assignment-3</Link>
+
+              <Link href="/Assignment-1" style={linkStyle}>Assignment 1</Link> {" "}
+              <Link href="/Assignment-2" style={linkStyle}>Assignment 2</Link>
+
             </nav>
           </aside>
 
@@ -29,9 +33,11 @@ const RootLayout = ({ children }) => {
           <main style={mainContentStyle}>
             <ThemeSwitcher />
             <LanguageProvider>
+
               <AuthContextProvider>
               {children}
               </AuthContextProvider>
+
             </LanguageProvider>
           </main>
         </body>
@@ -39,11 +45,12 @@ const RootLayout = ({ children }) => {
     </html>
   );
 };
+
 const bodyStyle = {
   display: "flex",
   minHeight: "100vh",
   margin: 0,
-};
+}
 const sidebarStyle = {
   width: "240px",
   backgroundColor: "#1e293b", 
@@ -62,11 +69,13 @@ const linkStyle = {
   fontWeight: "500",
   cursor: "pointer",
   textDecoration: "none",
+
 };
 
 const mainContentStyle = {
   flex: 1,
   padding: "40px",
 };
+
 
 export default RootLayout;

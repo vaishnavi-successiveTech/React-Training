@@ -38,18 +38,19 @@ const Assignment2Layout = ({ children }) => {
         }}
       >
         <div>
-          {(() => {
-            const links = [];
-            for (let i = 1; i <= 19; i++) {
-              links.push(
-                <Link key={i} href={`/Assignment-2/question-${i}`}>
-                  <button>Ques-{i}</button>
-                </Link>
-              );
-            }
-            return links;
-          })()}
-        </div>
+  {(() => { // iife is used.
+    const links = [];
+    for (let i = 1; i <= 19; i++) {
+      links.push(
+        <Link key={i} href={`/Assignment-2/question-${i}`}>
+          <button>Ques-{i}</button> {"  "}
+        </Link>
+      );
+    }
+    return links;
+  })()}
+</div>
+
       </div>
 
       <hr style={{ marginBottom: "20px" }} />

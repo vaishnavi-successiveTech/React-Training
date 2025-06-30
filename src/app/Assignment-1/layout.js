@@ -19,11 +19,6 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-<<<<<<< HEAD
-  
-=======
-   
->>>>>>> a329dfdc244b51c9ec3d98a3139c4efac550c8c2
       <div>
         <h2>Next.js Assignment-1</h2>
         <div className="parent-button">
@@ -47,18 +42,9 @@ export default function RootLayout({ children }) {
         </Link>{"  "}
         
        </div>
-<<<<<<< HEAD
-       
-        {children}
-        </div>
-        
-   
-=======
 
+       
         {children}
         </div>
-  
-       
->>>>>>> a329dfdc244b51c9ec3d98a3139c4efac550c8c2
   );
 }
