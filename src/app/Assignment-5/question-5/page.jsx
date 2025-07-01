@@ -1,7 +1,7 @@
 
-import AxiosPost from "@/components/AxiosPost";
 
-import { Axios } from "axios";
+import { AxiosPost } from "@/components";
+
 const HomePage=()=> {
   return (
     <main>

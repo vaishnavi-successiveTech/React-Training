@@ -1,4 +1,5 @@
-import FetchData from "@/components/FetchData";
+import { FetchData } from "@/components";
+
 
 const HomePgae=()=>{
     return (

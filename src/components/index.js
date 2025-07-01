@@ -19,6 +19,13 @@ import TimerComponent from "./TimerComponent";
 import ToDoList from "./ToDoList";
 import VoteApp from "./VoteApp";
 import Counter from "./Counter";
+import FetchData from "./FetchData";
+import FetchClient from "./FetchClient";
+import FetchLoadingComponent from "./FetchLoadingComponent";
+import AxiosPost from "./AxiosPost";
+import AxiosRetryButton from "./AxiosRetryButton";
+import PostForm from "./PostForm";
+
 export {
   CounterWithStep,
   StudentList,
@@ -41,6 +48,11 @@ export {
   Child,
   Clock,
   Counter,
- 
+  FetchData,
+  FetchClient,
+  FetchLoadingComponent,
+  AxiosPost,
+  AxiosRetryButton,
+  PostForm,
 };
 

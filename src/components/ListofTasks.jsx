@@ -9,7 +9,6 @@ const ListofTasks=()=> {
  // add a new task
   const addTodo = () => {
     if (input.trim() === "") return; // remove the fisrt and last space if there is any .
-
     const newTodo = { // initialize a object intital state of task
       id: Date.now(),
       text: input,
@@ -19,7 +18,6 @@ const ListofTasks=()=> {
     setTodos([...todos, newTodo]); // add the new task to the previous one 
     setInput("");
   };
-
   // Toggle complete status using useCallback
   const toggleComplete = useCallback((id) => {
     const updatedTodos = todos.map((todo) =>
@@ -27,7 +25,6 @@ const ListofTasks=()=> {
     );
     setTodos(updatedTodos);
   }, [todos]);
-
   return (
     <div>
       <h2>Todo List</h2>

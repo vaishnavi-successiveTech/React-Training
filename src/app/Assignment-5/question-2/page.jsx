@@ -1,5 +1,5 @@
-import FetchClient from "@/components/FetchClient";
-import FetchWithButton from "@/components/FetchWithButton";
+import { FetchClient } from "@/components";
+
 
 const HomePage=()=> {
   return (
