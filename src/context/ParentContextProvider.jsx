@@ -7,7 +7,7 @@ import {createContext, useState, useContext } from "react";
 
 const loggInContext = createContext();
 
- const ParentContextProvider=({ children })=> {
+ export const ParentContextProvider=({ children })=> {
   const [loggIn, setLoggIn] = useState(false);
   const name = "Nayan";
   const pass = "2486";
@@ -26,4 +26,4 @@ const loggInContext = createContext();
   );
 }
 export const useLogin = () => useContext(loggInContext);
-export default ParentContextProvider;
+

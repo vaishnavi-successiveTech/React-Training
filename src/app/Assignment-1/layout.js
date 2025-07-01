@@ -19,7 +19,6 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-   
       <div>
         <h2>Next.js Assignment-1</h2>
         <div className="parent-button">
@@ -44,9 +43,8 @@ export default function RootLayout({ children }) {
         
        </div>
 
+       
         {children}
         </div>
-  
-       
   );
 }
