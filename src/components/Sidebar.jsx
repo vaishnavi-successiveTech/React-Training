@@ -34,7 +34,7 @@ const Sidebar = () => {
       <h2 style={{ fontSize: "22px", paddingLeft: "20px", marginBottom: "20px" }}>Assignments</h2>
       <List>
         {routes.map(({ text, href }) => (
-          <Link key={text} href={href} passHref legacyBehavior>
+          <Link key={text} href={href} passHref >
             <ListItem disablePadding>
               <ListItemButton sx={{ paddingLeft: "20px" }}>
                 <ListItemText primary={text} primaryTypographyProps={{ style: { color: "white", fontWeight: 500 } }} />

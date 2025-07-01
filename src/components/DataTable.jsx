@@ -5,20 +5,18 @@ import {
   Paper, TableSortLabel, TablePagination
 } from "@mui/material";
 
-// Sample data
-const initialData = [
+const data = [
   { id: 1, name: "John", age: 25, email: "j@gmail.com" },
   { id: 2, name: "Nayan", age: 30, email: "nayan@gmail.com" },
   { id: 3, name: "Kavita", age: 22, email: "kavita@gmail.com" },
   { id: 4, name: "Dhariya", age: 28, email: "ddhariya@gmail.com" },
  
 ];
-
 const DataTable = () => {
   const [order, setOrder] = useState("asc");
   const [orderBy, setOrderBy] = useState("name");
   const [page, setPage] = useState(0);
-  const rowsPerPage = 4;
+  const rowsPerPage = 2; // mAke two rows per page
 
   const handleSort = (property) => {
     const isAsc = orderBy === property && order === "asc";
@@ -28,11 +26,13 @@ const DataTable = () => {
 
   const handleChangePage = (event, newPage) => setPage(newPage);
 
-  const sortedData = [...initialData].sort((a, b) => {
+  const sortedData = [...data].sort((a, b) => {
     if (order === "asc") return a[orderBy] > b[orderBy] ? 1 : -1;
     return a[orderBy] < b[orderBy] ? 1 : -1;
+    
   });
 
+  // to show data according to the page only 
   const paginatedData = sortedData.slice(
     page * rowsPerPage,
     page * rowsPerPage + rowsPerPage
@@ -50,7 +50,7 @@ const DataTable = () => {
                   direction={orderBy === "name" ? order : "asc"}
                   onClick={() => handleSort("name")}
                 >
-                  Name
+                 <strong>Name</strong>  
                 </TableSortLabel>
               </TableCell>
               <TableCell>
@@ -59,10 +59,10 @@ const DataTable = () => {
                   direction={orderBy === "age" ? order : "asc"}
                   onClick={() => handleSort("age")}
                 >
-                  Age
+                 <strong> Age </strong>
                 </TableSortLabel>
               </TableCell>
-              <TableCell>Email</TableCell>
+              <TableCell> <strong> Email</strong></TableCell>
             </TableRow>
           </TableHead>
 
@@ -80,7 +80,7 @@ const DataTable = () => {
 
       <TablePagination
         component="div"
-        count={initialData.length}
+        count={data.length}
         rowsPerPage={rowsPerPage}
         page={page}
         rowsPerPageOptions={[]}

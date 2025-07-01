@@ -3,9 +3,9 @@ import "./globals.css";
 import { Geist, Geist_Mono } from "next/font/google";
 import Sidebar from "@/components/Sidebar"; 
 
-// If you use any context, import it:
-// import ThemeProvider from "@/context/ThemeContext";
-// import { AuthContextProvider } from "@/context/AuthContext";
+
+import ThemeProvider from "@/context/ThemeContext";
+import { AuthContextProvider } from "@/context/AuthContext";
 
 const geistSans = Geist({
   subsets: ["latin"],
@@ -32,9 +32,9 @@ export default function RootLayout({ children }) {
           backgroundColor: "#f4f6f8",
         }}
       >
-        {/* If you want to wrap with providers, uncomment these lines: */}
-        {/* <ThemeProvider> */}
-        {/* <AuthContextProvider> */}
+    
+        <ThemeProvider> 
+         <AuthContextProvider>
         <div style={{ display: "flex", minHeight: "100vh" }}>
           <Sidebar />
           <main
@@ -47,8 +47,8 @@ export default function RootLayout({ children }) {
             {children}
           </main>
         </div>
-        {/* </AuthContextProvider> */}
-        {/* </ThemeProvider> */}
+        </AuthContextProvider>
+        </ThemeProvider>
       </body>
     </html>
   );
