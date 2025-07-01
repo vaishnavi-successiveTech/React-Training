@@ -60,9 +60,6 @@ export default function RootLayout({ children }) {
           <Link href="/Assignment-5/question-16">
           <button>Question-16</button>
         </Link>{"  "}
-           <Link href="/Assignment-6">
-          <button>Question-13</button>
-        </Link>{"  "}
        </div>
 
         {children}
