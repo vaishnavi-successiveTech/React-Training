@@ -6,11 +6,8 @@ const Weather=({ temperature })=>{
   } else if (temperature < 10) {
     message = "It's cold today!";
   }
-
   return (
-    
     <>
-
     <div>
       <p id="weatherCss"> {message}</p>
     </div>

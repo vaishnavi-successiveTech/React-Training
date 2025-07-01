@@ -1,52 +1,26 @@
-// "use client";
-// import ResuableButton from "@/components/ResuableButton";
-
-// export default function ButtonDemo() {
-//   const handlePrimaryClick = () => {
-//     alert("Primary button clicked!");
-//   };
-
-//   const handleSecondaryClick = () => {
-//     alert("Secondary button clicked!");
-//   };
-
-//   const handleDangerClick = () => {
-//     alert("Danger button clicked!");
-//   };
-
-//   return (
-//     <div style={{ padding: "20px" }}>
-//       <h2>Reusable Button Demo</h2>
-//       <ResuableButton variant="primary" onClick={handlePrimaryClick}>
-//         Primary
-//       </ResuableButton>
-//       <ResuableButton variant="secondary" onClick={handleSecondaryClick}>
-//         Secondary
-//       </ResuableButton>
-//       <ResuableButton variant="danger" onClick={handleDangerClick}>
-//         Danger
-//       </ResuableButton>
-//     </div>
-//   );
-// }
 "use client";
 
-import ResuableButton from "@/components/ResuableButton";
-
-const HomePage=()=> {
+import { ReusableButton } from "@/components";
+import React from "react";
+export default function HomePage() {
+  const handlePrimaryClick = () => alert("Primary clicked!");
+  const handleSecondaryClick = () => alert("Secondary clicked!");
+  const handleDangerClick = () => alert("Danger clicked!");
   return (
-    <div style={{ padding: "20px" }}>
-      <h2>Reusable Button Demo</h2>
-      <ResuableButton variant="primary" onClick={() => alert("Primary clicked!")}>
-        Primary
-      </ResuableButton>
-      <ResuableButton variant="secondary" onClick={() => alert("Secondary clicked!")}>
-        Secondary
-      </ResuableButton>
-      <ResuableButton variant="danger" onClick={() => alert("Danger clicked!")}>
-        Danger
-      </ResuableButton>
+    <div style={{ padding: 20 }}>
+      <h1>Dumb Buttons</h1>
+
+      <ReusableButton colors="primary" onClick={handlePrimaryClick}>
+        Primary Button
+      </ReusableButton>
+
+      <ReusableButton colors="secondary" onClick={handleSecondaryClick}>
+        Secondary Button
+      </ReusableButton>
+
+      <ReusableButton colors="danger" onClick={handleDangerClick}>
+        Danger Button
+      </ReusableButton>
     </div>
   );
 }
-export default HomePage;

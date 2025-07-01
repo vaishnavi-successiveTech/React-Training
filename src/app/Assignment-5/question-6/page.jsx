@@ -1,7 +1,7 @@
 
 
 
-import { Axios } from "axios";
+import { AxiosRetryButton } from "@/components";
 const HomePage=()=> {
   return (
     <main>

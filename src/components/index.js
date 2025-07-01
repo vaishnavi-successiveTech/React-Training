@@ -18,13 +18,15 @@ import ThemeSwitcher from "./ThemeSwitcher";
 import TimerComponent from "./TimerComponent";
 import ToDoList from "./ToDoList";
 import VoteApp from "./VoteApp";
-import Counter from "./Counter";
 import FetchData from "./FetchData";
 import FetchClient from "./FetchClient";
 import FetchLoadingComponent from "./FetchLoadingComponent";
 import AxiosPost from "./AxiosPost";
 import AxiosRetryButton from "./AxiosRetryButton";
 import PostForm from "./PostForm";
+import UserData from "./UserData";
+import ReusableButton from "./ResuableButton";
+import AboutContent from "./AboutContent";
 
 export {
   CounterWithStep,
@@ -47,12 +49,15 @@ export {
   ListofTasks,
   Child,
   Clock,
-  Counter,
+ 
   FetchData,
   FetchClient,
   FetchLoadingComponent,
   AxiosPost,
   AxiosRetryButton,
   PostForm,
+  UserData,
+  ReusableButton,
+  AboutContent,
 };
 

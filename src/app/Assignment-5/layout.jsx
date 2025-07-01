@@ -45,21 +45,22 @@ export default function RootLayout({ children }) {
           <button>Question-7</button>
         </Link>{"  "}
         <Link href="/Assignment-5/question-8">
-          <button>Question-8</button>
-        </Link>{"  "}
-        <Link href="/Assignment-5/question-9">
-          <button>Question-9</button>
-        </Link>{"  "}
-           <Link href="/Assignment-5/question-10">
-          <button>Question-10</button>
-        </Link>{"  "}
-           <Link href="/Assignment-5/question-11">
-          <button>Question-11</button>
-        </Link>{"  "}
-           <Link href="/Assignment-5/question-12">
           <button>Question-12</button>
         </Link>{"  "}
+    
            <Link href="/Assignment-5/question-13">
+          <button>Question-13</button>
+        </Link>{"  "}
+        <Link href="/Assignment-5/question-14">
+          <button>Question-14</button>
+        </Link>{"  "}
+        <Link href="/Assignment-5/question-15">
+          <button>Question-15</button>
+        </Link>{"  "}
+          <Link href="/Assignment-5/question-16">
+          <button>Question-16</button>
+        </Link>{"  "}
+           <Link href="/Assignment-6">
           <button>Question-13</button>
         </Link>{"  "}
        </div>

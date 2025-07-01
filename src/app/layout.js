@@ -5,6 +5,7 @@ import "./globals.css";
 import { ThemeSwitcher } from "@/components";
 import ThemeProvider from "@/context/ThemeContext";
 import LanguageProvider from "@/context/LanguageContext";
+import { AuthContextProvider } from "@/context/AuthContexts";
 
 export const metadata = {
   title: "Create Next App",
@@ -75,7 +76,9 @@ const RootLayout = ({ children }) => {
           <main style={mainContentStyle}>
             <ThemeSwitcher />
             <LanguageProvider>
+              <AuthContextProvider>
               {children}
+              </AuthContextProvider>
             </LanguageProvider>
           </main>
         </body>

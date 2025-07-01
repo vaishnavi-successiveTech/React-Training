@@ -7,13 +7,11 @@ const AxiosPost=async()=>{
       return (<>
       <h1> Fetch Name using Axios</h1>
       <ul>
-   { list.map((message,index)=>
+       { list.map((message,index)=>
         <li key={index}>
            { message.name}
         </li>
-
       )
-     
 }  </ul>
       </>)
 }

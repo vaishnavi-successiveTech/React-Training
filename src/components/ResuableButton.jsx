@@ -1,54 +1,23 @@
 "use client";
 
-import { useState } from "react";
-
-const ResuableButton=({
-  children,
-  variant = "primary",
-  onClick,
-}) =>{
-  const [clicked, setClicked] = useState(false);
-
-  const styles = {
-    primary: {
-      backgroundColor: clicked ? "#1d4ed8" : "#2563eb",
-      color: "white",
-      border: "none",
-    },
-    secondary: {
-      backgroundColor: clicked ? "#d1d5db" : "#e5e7eb",
-      color: "#111827",
-      border: "1px solid #d1d5db",
-    },
-    danger: {
-      backgroundColor: clicked ? "#b91c1c" : "#dc2626",
-      color: "white",
-      border: "none",
-    },
+import React from "react";
+import Button from "@mui/material/Button";
+const ReusableButton = ({ children, colors = "primary", onClick }) => {
+  const changeColors = {
+    primary: "primary", 
+    secondary: "secondary",
+    danger: "error",       
   };
-
-  const handleClick = (e) => {
-    setClicked(true);
-    if (onClick) {
-      onClick(e);
-    }
-  };
-
   return (
-    <button
-      onClick={handleClick}
-      style={{
-        ...styles[variant],
-        padding: "10px 16px",
-        borderRadius: "4px",
-        cursor: "pointer",
-        fontWeight: "500",
-        marginRight: "8px",
-      }}
+    <Button
+      variant="contained"
+      color={changeColors[colors] || "primary"}
+      onClick={onClick}
+      sx={{ marginRight: 1 }} // for inline styling
     >
       {children}
-    </button>
+    </Button>
   );
-}
+};
 
-export default ResuableButton;
+export default ReusableButton;
