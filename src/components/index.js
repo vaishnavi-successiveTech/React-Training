@@ -28,6 +28,13 @@ import UserData from "./UserData";
 import ReusableButton from "./ResuableButton";
 import AboutContent from "./AboutContent";
 
+import Counter from "./Counter";
+
+import ChildComponent from "./ChildComponent";
+import Settings from "./Settings";
+import Profile from "./Profile";
+import Items from "./Items";
+import Login from "./Login";
 export {
   CounterWithStep,
   StudentList,
@@ -59,5 +66,12 @@ export {
   UserData,
   ReusableButton,
   AboutContent,
+
+  Counter,
+  ChildComponent,
+  Settings,
+  Profile,
+  Items,
+  Login,
 };
 
