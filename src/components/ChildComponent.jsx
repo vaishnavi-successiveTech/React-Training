@@ -1,19 +1,25 @@
 //child should have login button
 "use client"
-
-
 import { useAuth } from "@/context/AuthContext";
-import { useState } from "react";
+import { redirect } from "next/navigation";
+import { useEffect, useState } from "react";
 
 const ChildComponent=()=>{
 const [username,setUsername]=useState("");
 const [password,setPassword]=useState("");
+ const [shouldRedirect, setShouldRedirect] = useState(false);
 
 const { loggedIn, login } = useAuth();
-
 const handleLoginClick = () => {
-  login(username, password); // pass as strings
+  login(username, password);
+   setShouldRedirect(true);
 };
+ useEffect(() => {
+    if (loggedIn && shouldRedirect) {
+      
+      redirect("/Assignment-3");
+    }
+  }, [loggedIn, shouldRedirect]);
 return(
     <>
     <div style={{ justifyContent:"center",alignContent:"center", boxShadow:" 0 4px 8px 0 rgba(0,0,0,0.2)",

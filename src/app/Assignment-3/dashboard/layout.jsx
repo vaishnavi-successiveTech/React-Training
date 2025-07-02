@@ -1,7 +1,6 @@
 // app/Assignment-3/dashboard/layout.js
 import Link from "next/link";
-
-export default function DashboardLayout({ children }) {
+const DashboardLayout=({ children })=> {
   return (
     <div style={{ padding: "20px" }}>
       <h2>Dashboard</h2>
@@ -21,7 +20,6 @@ export default function DashboardLayout({ children }) {
     </div>
   );
 }
-
 const navBtn = {
   marginRight: "10px",
   padding: "10px 16px",
@@ -31,3 +29,4 @@ const navBtn = {
   borderRadius: "5px",
   cursor: "pointer",
 };
+export default DashboardLayout;

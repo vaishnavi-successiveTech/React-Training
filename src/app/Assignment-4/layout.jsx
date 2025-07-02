@@ -10,7 +10,7 @@ const geistMono = Geist_Mono({
 });
 export const metadata = {
   title: "Assignment-4",
-  description: "Next.js Assignment-3 Layout",
+  description: "Next.js Assignment-4 Layout",
 };
 const Assignment4Layout = ({ children }) => {
   return (
@@ -20,7 +20,7 @@ const Assignment4Layout = ({ children }) => {
         padding: "20px",
       }} >
       <h2 style={{ marginBottom: "16px", color: "#333" }}>
-        Next.js Assignment-3
+        Next.js Assignment-4
       </h2>
       <div
         className="parent-button"

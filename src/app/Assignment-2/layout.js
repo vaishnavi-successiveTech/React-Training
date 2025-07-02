@@ -43,13 +43,13 @@ const Assignment2Layout=({ children })=> {
     for (let i = 1; i <= 19; i++) {
       links.push(
         <Link key={i} href={`/Assignment-2/question-${i}`}>
-          <button>Ques-{i}</button> {"  "}
+          <button style={{ marginRight:10}}>Ques-{i}</button> 
         </Link>
       );
     }
     return links;
   })()}
-</div>
+     </div>
       </div>
 
       <hr style={{ marginBottom: "20px" }} />

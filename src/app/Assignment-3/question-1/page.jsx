@@ -1,19 +1,28 @@
+"use client";
 import { ChildComponent } from "@/components";
-
-
 import { AuthContextProvider } from "@/context/AuthContext";
-export default function Home() {
+import { useAuth } from "@/context/AuthContext";
+import { redirect } from "next/navigation";
+const Home = () => {
+  const { loggedIn, login } = useAuth();
   return (
-    <div>
-      <p>
+    <>
+      {loggedIn ? (
+         redirect('/Assignment-3')
+      ) : (
+        <>
+          <div>
+              <p>
         UserName :"Nayan"
         Password:"2486"
       </p>
-      <AuthContextProvider>
+       <AuthContextProvider>
         <ChildComponent/>
       </AuthContextProvider>
-
-    </div>
+          </div>
+        </>
+      )}
+    </>
   );
-}
-
+};
+export default Home;

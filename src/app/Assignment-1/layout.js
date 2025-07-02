@@ -39,10 +39,9 @@ const RootLayout = ({ children }) =>{
         </Link>{"  "}
        </div>
 
+       
         {children}
         </div>
-
-
   );
 }
 export default RootLayout;
