@@ -22,7 +22,7 @@ const RootLayout = ({ children }) => {
               <Link href="/Assignment-1" style={linkStyle}>Assignment 1</Link> 
               <Link href="/Assignment-2" style={linkStyle}>Assignment 2</Link>
               <Link href="/Assignment-3" style={linkStyle}>Assignment-3</Link>
-              <Link href="/Assignment-3" style={linkStyle}>Assignment-6</Link>
+              <Link href="/Assignment-6" style={linkStyle}>Assignment-6</Link>
             </nav>
           </aside>
           {/* Main content */}

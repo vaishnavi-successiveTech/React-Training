@@ -1,18 +1,3 @@
-<<<<<<< HEAD
-
-const  HomePage=()=> {
-  return (
-    <div>
-      <h2>Welcome to Next.js Assignments</h2>
-      <p>Click On Assignments</p>
-    </div>
-  );
-}
-export default HomePage;
-
-  
- 
-=======
 const HomePage = () => {
   return (
     <div
@@ -75,4 +60,3 @@ const HomePage = () => {
   );
 };
 export default HomePage;
->>>>>>> 014d1199b9084d88e30be47dca9cf69fcae87cb4
