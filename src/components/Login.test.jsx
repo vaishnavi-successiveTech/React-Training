@@ -23,18 +23,13 @@ describe('Login Component', () => {
 
   it('logs in successfully with correct credentials', async () => {
     renderWithProvider();
-
     await userEvent.type(screen.getByLabelText(/username/i), 'Nayan');
     await userEvent.type(screen.getByLabelText(/password/i), '2486');
     await userEvent.click(screen.getByRole('button', { name: /log in/i }));
-
-  
     expect(await screen.findByText(/welcome back !!/i)).toBeInTheDocument();
   });
-
   it('does not log in with wrong credentials', async () => {
     renderWithProvider();
-
     await userEvent.type(screen.getByLabelText(/username/i), 'wronguser');
     await userEvent.type(screen.getByLabelText(/password/i), '000');
     await userEvent.click(screen.getByRole('button', { name: /log in/i }));
