@@ -11,7 +11,7 @@ const [password,setPassword]=useState("");
 
 const { loggedIn, login } = useAuth();
 const handleLoginClick = () => {
-  login(username, password); // pass as strings
+  login(username, password);
    setShouldRedirect(true);
 };
  useEffect(() => {
