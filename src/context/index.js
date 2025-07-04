@@ -1,8 +1,14 @@
 import { LanguageContext} from "./LanguageContext";
 import { ThemeContext } from "./ThemeContext";
 import { CartContext } from "./CartContext";
-import ParentContextProvider from "./ParentComponent";
-import { AuthContextProvider } from "./AuthContexts";
+
+import ParentContextProvider from "./ParentContextProvider";
 
 
-export{LanguageContext,ThemeContext,CartContext,ParentContextProvider,AuthContextProvider};
+import MyAuthContext, { AuthContextProvider, useAuth } from "./AuthContext";
+
+
+
+export{LanguageContext,ThemeContext,CartContext,ParentContextProvider,MyAuthContext,useAuth
+};
+

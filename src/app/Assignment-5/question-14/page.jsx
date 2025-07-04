@@ -1,12 +1,12 @@
 "use client";
 
-import withAuth from "@/components/withAuth";
+import withAuth from "@/hoc/withAuth";
 
 const ProtectedPage = () => {
   return (
     <>
-      <h1>Protected Page</h1>
-      <p>Only authenticated users can see this.</p>
+      <h1> This is my Protected Page </h1>
+      <p> Come after Login</p>
     </>
   );
 };

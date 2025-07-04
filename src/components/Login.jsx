@@ -1,11 +1,10 @@
 "use client";
 
-
-import { useAuth } from "@/context";
+import { useAuth } from "@/context/AuthContext";
 import { redirect } from "next/navigation";
 import { useState, useEffect } from "react";
 
-const LoginHOC = () => {
+const Login = () => {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
   const { loggedIn, login } = useAuth();
@@ -21,7 +20,7 @@ const LoginHOC = () => {
   useEffect(() => {
     if (loggedIn && shouldRedirect) {
       
-      redirect("/Assignment-5/question-14");
+      redirect("/about");
     }
   }, [loggedIn, shouldRedirect]);
 
@@ -76,4 +75,5 @@ const LoginHOC = () => {
   );
 };
 
-export default LoginHOC;
+export default Login;
+

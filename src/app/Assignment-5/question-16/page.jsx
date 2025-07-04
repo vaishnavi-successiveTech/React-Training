@@ -1,5 +1,4 @@
 
-
 import HocData from "@/components/HocData";
 
 const HomePage = () => {

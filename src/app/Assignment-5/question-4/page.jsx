@@ -1,21 +1,12 @@
-const { UserData } = require("@/components");
+import UserData from "./UserData";
 
-
-const getData=async ()=>{
-    const response=await fetch("https://jsonplaceholder.typicode.com/users");
-    const data=await response.json();
-    return data;
+const ProductsPage=()=> {
+  return (
+    <div>
+      <UserData />
+    </div>
+  );
 }
 
-const HomePage=async()=>{
-    const userData= await getData(); // here to use data async return promise if we does not use await it will return promise which is an object
-    return(
-        <>
-        <h2> User Tables</h2>
-           <UserData data={userData}/>
-        </>
-    )
-
-}
-export default HomePage;
+export default ProductsPage;
 

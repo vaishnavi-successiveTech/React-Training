@@ -1,4 +1,4 @@
-import withDataFetching from "./withDataFetching"
+import withDataFetching from "../hoc/withDataFetching"
 
 const HocData=(props)=>{
 const {data}=props

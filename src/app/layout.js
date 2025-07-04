@@ -1,11 +1,19 @@
-import { Geist, Geist_Mono } from "next/font/google";
-import Link from "next/link";
+
 import "./globals.css";
 
-import { ThemeSwitcher } from "@/components";
 import ThemeProvider from "@/context/ThemeContext";
+import { AuthContextProvider } from "@/context/AuthContext";
+import { ThemeSwitcher } from "@/components";
+
 import LanguageProvider from "@/context/LanguageContext";
-import { AuthContextProvider } from "@/context/AuthContexts";
+
+// import { AuthContextProvider } from "@/context/AuthContexts";
+
+import Link from "next/link";
+import SidebarWrapper from "@/components/SidebarWrapper";
+
+
+
 
 export const metadata = {
   title: "Create Next App",
@@ -16,84 +24,32 @@ const RootLayout = ({ children }) => {
     <html lang="en">
       <ThemeProvider>
         <body style={bodyStyle}>
-          {/* Sidebar */}
+       
           <aside style={sidebarStyle}>
             <h2 style={{ fontSize: "22px", marginBottom: "20px" }}>Assignments</h2>
             <nav style={{ display: "flex", flexDirection: "column", gap: "12px" }}>
-              <Link href="/Assignment-1">
-                <button
-                  style={{
-                    backgroundColor: "#3b82f6",
-                    color: "white",
-                    padding: "10px 16px",
-                    border: "none",
-                    borderRadius: "6px",
-                    textAlign: "left",
-                    fontWeight: "500",
-                    cursor: "pointer",
-                  }}
-                >
-                  Assignment 1
-                </button>
-              </Link>
-              <Link href="/Assignment-2">
-                <button
-                  style={{
-                    backgroundColor: "#3b82f6",
-                    color: "white",
-                    padding: "10px 16px",
-                    border: "none",
-                    borderRadius: "6px",
-                    textAlign: "left",
-                    fontWeight: "500",
-                    cursor: "pointer",
-                  }}
-                >
-                  Assignment 2
-                </button>
-              </Link>
-              <Link href="/Assignment-5">
-                <button
-                  style={{
-                    backgroundColor: "#3b82f6",
-                    color: "white",
-                    padding: "10px 16px",
-                    border: "none",
-                    borderRadius: "6px",
-                    textAlign: "left",
-                    fontWeight: "500",
-                    cursor: "pointer",
-                  }}
-                >
-                  Assignment 5
-                </button>
-              </Link>
+              <SidebarWrapper/>
 
             </nav>
           </aside>
-
-          {/* Main content */}
           <main style={mainContentStyle}>
-            <ThemeSwitcher />
+            <AuthContextProvider>
             <LanguageProvider>
-              <AuthContextProvider>
+                 <ThemeSwitcher />
               {children}
-              </AuthContextProvider>
             </LanguageProvider>
+            </AuthContextProvider>
           </main>
         </body>
       </ThemeProvider>
     </html>
   );
 };
-
-
 const bodyStyle = {
   display: "flex",
   minHeight: "100vh",
   margin: 0,
-};
-
+}
 const sidebarStyle = {
   width: "240px",
   backgroundColor: "#1e293b", 
@@ -112,6 +68,7 @@ const linkStyle = {
   fontWeight: "500",
   cursor: "pointer",
   textDecoration: "none",
+
 };
 
 const mainContentStyle = {
@@ -120,3 +77,4 @@ const mainContentStyle = {
 };
 
 export default RootLayout;
+

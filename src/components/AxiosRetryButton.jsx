@@ -1,62 +1,38 @@
 "use client";
+import { useState, useEffect } from "react";
+import fetchUsersAxios from "@/app/Assignment-5/ActionAxios";
 
-import { useEffect, useState } from "react";
-import axios from "axios";
-
-const AxiosRetryButton = () => {
-  const [data, setUserData] = useState([]);
+const AxiosRetryButton = ({ initialData = [] }) => {
+  const [data, setData] = useState(initialData);
+  const [loading, setLoading] = useState(false);
   const [error, setError] = useState(null);
-  const [loading, setLoading] = useState(true);
-
   const fetchData = async () => {
     setLoading(true);
     setError(null);
-    try {
-      const response = await axios.get("https://jsonplaceholder.typicode.com/users");
-      setUserData(response.data);
-    } catch (error) {
-      console.error("Error fetching data:", error);
-      setError("Failed to fetch data. Try again.");
-    } finally {
+      const response = await fetchUsersAxios();
+        setData(response.data);
       setLoading(false);
-    }
   };
 
   useEffect(() => {
-    fetchData();
-  }, []);
+    if (initialData.length === 0) fetchData();
+  }, [initialData]);
 
   return (
     <div>
       <h3>User List</h3>
-
       {loading && <p>Loading...</p>}
-
-      {error && (
-        <p style={{ color: "red" }}>
-          {error}
-        </p>
-      )}
-      {!loading && !error && (
-        <div style={{ marginBottom: "12px" }}>
+      {error && <p style={{ color: "red" }}>{error}</p>}
+      {!loading && !error && data.length > 0 ? (
+        <ul>
           {data.map((user) => (
-            <div key={user.id}>{user.name}</div>
+            <li key={user.id}>{user.name}</li>
           ))}
-        </div>
+        </ul>
+      ) : (
+        <p>No users available.</p>
       )}
-      <button
-        onClick={fetchData}
-        disabled={loading}
-        style={{
-          marginTop: "12px",
-          padding: "8px 16px",
-          backgroundColor: "#2563eb",
-          color: "white",
-          border: "none",
-          borderRadius: "4px",
-          cursor: loading ? "not-allowed" : "pointer",
-        }}
-      >
+      <button onClick={fetchData} disabled={loading}>
         {loading ? "Loading..." : "Retry"}
       </button>
     </div>
