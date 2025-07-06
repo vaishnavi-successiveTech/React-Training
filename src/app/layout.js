@@ -1,19 +1,23 @@
-
 import "./globals.css";
+import { Geist, Geist_Mono } from "next/font/google";
 
-import ThemeProvider from "@/context/ThemeContext";
-import { AuthContextProvider } from "@/context/AuthContext";
 import { ThemeSwitcher } from "@/components";
 
 import LanguageProvider from "@/context/LanguageContext";
 
-// import { AuthContextProvider } from "@/context/AuthContexts";
-
-import Link from "next/link";
 import SidebarWrapper from "@/components/SidebarWrapper";
+import ThemeProvider from "@/context/ThemeContext";
+import { AuthContextProvider } from "@/context/AuthContext";
 
+const geistSans = Geist({
+  subsets: ["latin"],
+  variable: "--font-geist-sans",
+});
 
-
+const geistMono = Geist_Mono({
+  subsets: ["latin"],
+  variable: "--font-geist-mono",
+});
 
 export const metadata = {
   title: "Create Next App",
@@ -29,52 +33,26 @@ const RootLayout = ({ children }) => {
             <h2 style={{ fontSize: "22px", marginBottom: "20px" }}>Assignments</h2>
             <nav style={{ display: "flex", flexDirection: "column", gap: "12px" }}>
               <SidebarWrapper/>
-
             </nav>
           </aside>
           <main style={mainContentStyle}>
             <AuthContextProvider>
             <LanguageProvider>
                  <ThemeSwitcher />
-              {children}
+                   {children}
             </LanguageProvider>
-            </AuthContextProvider>
+             </AuthContextProvider>
+        
           </main>
         </body>
       </ThemeProvider>
     </html>
   );
 };
-const bodyStyle = {
-  display: "flex",
-  minHeight: "100vh",
-  margin: 0,
-}
-const sidebarStyle = {
-  width: "240px",
-  backgroundColor: "#1e293b", 
-  color: "white",
-  padding: "20px",
-  display: "flex",
-  flexDirection: "column",
-};
 
-const linkStyle = {
-  color: "white",
-  padding: "10px 16px",
-  border: "none",
-  borderRadius: "6px",
-  textAlign: "left",
-  fontWeight: "500",
-  cursor: "pointer",
-  textDecoration: "none",
 
-};
 
-const mainContentStyle = {
-  flex: 1,
-  padding: "40px",
-};
+
 
 export default RootLayout;
 
