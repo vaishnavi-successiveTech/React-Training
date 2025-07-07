@@ -1,19 +1,13 @@
-
-// app/layout.js
 import "./globals.css";
 import { Geist, Geist_Mono } from "next/font/google";
 
-
-
-
-import ThemeProvider from "@/context/ThemeContext";
-import { AuthContextProvider } from "@/context/AuthContext";
 import { ThemeSwitcher } from "@/components";
 
 import LanguageProvider from "@/context/LanguageContext";
-import Link from "next/link";
-import SidebarWrapper from "@/components/SidebarWrapper";
 
+import SidebarWrapper from "@/components/SidebarWrapper";
+import ThemeProvider from "@/context/ThemeContext";
+import { AuthContextProvider } from "@/context/AuthContext";
 
 const geistSans = Geist({
   subsets: ["latin"],
@@ -42,21 +36,19 @@ const RootLayout = ({ children }) => {
             </nav>
           </aside>
           <main style={mainContentStyle}>
-            <ThemeSwitcher />
+            <AuthContextProvider>
             <LanguageProvider>
-
-              <AuthContextProvider>
-              {children}
-              </AuthContextProvider>
-
+                 <ThemeSwitcher />
+                   {children}
             </LanguageProvider>
+             </AuthContextProvider>
+        
           </main>
         </body>
       </ThemeProvider>
     </html>
   );
 };
-
 const bodyStyle = {
   display: "flex",
   minHeight: "100vh",
@@ -87,6 +79,9 @@ const mainContentStyle = {
   flex: 1,
   padding: "40px",
 };
+
+
+
 
 
 export default RootLayout;

@@ -42,7 +42,6 @@ const DialogBox = () => {
       handleClose();
     }
   };
-
   return (
     <>
       <Button variant="outlined" onClick={handleOpen}>
@@ -83,5 +82,4 @@ const DialogBox = () => {
     </>
   );
 };
-
 export default DialogBox;
