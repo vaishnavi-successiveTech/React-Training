@@ -1,6 +1,6 @@
 // here render the function which we craeted in Action,jsx 
 import { FetchClient } from "@/components";
-import { fetchUsers } from "../Action";
+import { fetchUsers } from "../action";
 
 export default async function FetchData() {
   const error=null;

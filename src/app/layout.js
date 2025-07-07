@@ -49,6 +49,36 @@ const RootLayout = ({ children }) => {
     </html>
   );
 };
+const bodyStyle = {
+  display: "flex",
+  minHeight: "100vh",
+  margin: 0,
+}
+const sidebarStyle = {
+  width: "240px",
+  backgroundColor: "#1e293b", 
+  color: "white",
+  padding: "20px",
+  display: "flex",
+  flexDirection: "column",
+};
+
+const linkStyle = {
+  color: "white",
+  padding: "10px 16px",
+  border: "none",
+  borderRadius: "6px",
+  textAlign: "left",
+  fontWeight: "500",
+  cursor: "pointer",
+  textDecoration: "none",
+
+};
+
+const mainContentStyle = {
+  flex: 1,
+  padding: "40px",
+};
 
 
 

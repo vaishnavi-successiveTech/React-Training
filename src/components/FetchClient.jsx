@@ -1,6 +1,6 @@
 "use client"
 
-import { fetchUsers } from "@/app/Assignment-5/Action";
+import { fetchUsers } from "@/app/Assignment-5/action";
 import { useState } from "react";
 
 const FetchClient= ({data=[]})=>{

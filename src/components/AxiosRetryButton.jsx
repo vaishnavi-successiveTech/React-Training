@@ -1,6 +1,6 @@
 "use client";
 import { useState, useEffect } from "react";
-import fetchUsersAxios from "@/app/Assignment-5/ActionAxios";
+import fetchUsersAxios from "@/app/Assignment-5/actionAxios";
 
 const AxiosRetryButton = ({ initialData = [] }) => {
   const [data, setData] = useState(initialData);

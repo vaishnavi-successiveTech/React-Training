@@ -1,4 +1,4 @@
-import { fetchUsers } from "../Action";
+import { fetchUsers } from "../action";
 
 import FetchLoadingComponent from "./FetchLoadingComponent";
 

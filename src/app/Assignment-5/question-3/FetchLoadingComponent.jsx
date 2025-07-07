@@ -1,7 +1,7 @@
 'use client';
 
 import { useState } from "react";
-import { fetchUsers } from "../Action";
+import { fetchUsers } from "../action";
 
 const FetchLoadingComponent = ({ initialData }) => {
   const [data, setData] = useState(initialData); 

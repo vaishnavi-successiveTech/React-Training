@@ -1,4 +1,4 @@
-import fetchUsersAxios from '../ActionAxios';
+import fetchUsersAxios from '../actionAxios';
 
 const HomePage = async () => {
   const users = await fetchUsersAxios();

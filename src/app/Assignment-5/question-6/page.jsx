@@ -1,5 +1,5 @@
 import { AxiosRetryButton } from "@/components";
-import fetchUsersAxios from "../ActionAxios";
+import fetchUsersAxios from "../actionAxios";
 
 export default async function FetchData() {
 
