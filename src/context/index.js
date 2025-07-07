@@ -1,4 +1,3 @@
-
 import { ThemeContext } from "./ThemeContext";
 import { CartContext } from "./CartContext";
 
@@ -9,4 +8,3 @@ import LanguageProvider from "./LanguageContext";
 
 export{LanguageProvider,ThemeContext,CartContext,ParentContextProvider,MyAuthContext,useAuth
 };
-

@@ -32,23 +32,30 @@ const Assignment3Layout = ({ children }) => {
         fontFamily: "sans-serif", 
         padding: "20px",
       }}  >
-      <h2 style={{ marginBottom: "16px", color: "#333"  }}>
+      <h2 style={{ marginBottom: "16px", color: "#333" }}>
         Next.js Assignment-3
       </h2>
-      <div style={{ marginBottom: "20px" , display:"flex", padding:"2px" }}>
+      <div style={{ marginBottom: "20px" }}>
       <div className="parent-button">
 <div className="parent-button">
-   {(() => { // iife is used.
-    const links = [];
-    for (let i = 1; i <= 6; i++) {
-      links.push(
-        <Link key={i} href={`/Assignment-3/question-${i}`}>
-          <button style={{ marginRight:10}}>Ques-{i}</button> 
-        </Link>
-      );
-    }
-    return links;
-  })()}
+  <Link href="/Assignment-3/question-1">
+    <button>Ques-1</button>
+  </Link>
+  <Link href="/Assignment-3/question-2">
+    <button>Ques-2</button>
+  </Link>
+  <Link href="/Assignment-3/question-3">
+    <button>Ques-3</button>
+  </Link>
+  <Link href="/Assignment-3/question-4">
+    <button>Ques-4</button>
+  </Link>
+  <Link href="/Assignment-3/dashboard">
+    <button>Ques-5</button>
+  </Link>
+  <Link href="/Assignment-3/question-6">
+    <button>Ques-6</button>
+  </Link>
 </div>
 </div>
       </div>

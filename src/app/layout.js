@@ -49,6 +49,7 @@ const RootLayout = ({ children }) => {
     </html>
   );
 };
+
 const bodyStyle = {
   display: "flex",
   minHeight: "100vh",
@@ -81,8 +82,4 @@ const mainContentStyle = {
 };
 
 
-
-
-
 export default RootLayout;
-

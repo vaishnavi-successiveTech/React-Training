@@ -1,11 +1,12 @@
-body.light {
-  background-color: white;
-  color: black;
+
+ body.light{
+  background:white;
+  color:black
 }
 
-body.dark {
-  background-color: #1a1a1a;
-  color: white;
+body.dark{
+  background:black;
+  color:white
 }
 
 #greetingCss{
@@ -33,7 +34,6 @@ body.dark {
   border-radius: 10px;
   border: none;
   color: rgb(24, 23, 23);
-  
 }
 
 .btn-1{

@@ -1,8 +1,13 @@
-import LoginHOC from "@/components/LoginHOC";
+import { LoginHOC } from "@/components";
 
-const  HomePage=()=> {
+
+const Login = () => {
   return (
-   <LoginHOC/>
+    <>
+      <LoginHOC />
+    </>
   );
-}
-export default HomePage;
+};
+
+export default Login;
+

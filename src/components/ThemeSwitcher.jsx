@@ -12,6 +12,7 @@ const ThemeSwitcher = () => {
   useEffect(() => {
     document.body.className = theme;
   }, [theme]);
+
   return (
     <div style={{ padding: "16px" }}>
       {/* <h3 style={{ marginBottom: "10px" }}>Current Theme: {theme}</h3> */}
@@ -28,6 +29,7 @@ const ThemeSwitcher = () => {
           width: "auto",
           textAlign: "left",
           maxWidth:"100"
+
         }}
       >
         Switch Theme

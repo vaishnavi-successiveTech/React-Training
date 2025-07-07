@@ -47,7 +47,11 @@ import DataTable from "./DataTable";
 import FormInput from "./FormInput";
 import InputField from "./InputField";
 
+
 import CounterWithStep from "./CounterWithStep";
+import AboutContent from "./AboutContent";
+import LoginHOC from "./LoginHOC";
+
 
 export {
   CounterWithStep,
@@ -73,12 +77,12 @@ export {
   Clock,
   FetchData,
   FetchClient,
- 
+ AboutContent,
   AxiosPost,
   AxiosRetryButton,
   PostForm,
   ReusableButton,
-
+LoginHOC,
   ChildComponent,
   Settings,
   Profile,
@@ -98,5 +102,6 @@ FormSummary,
 DataTable,
 FormInput,
 InputField,
+
 };
 
