@@ -1,9 +1,7 @@
 "use client";
 
+import { useAuth } from "@/context";
 import { redirect } from "next/navigation";
-import { useAuth } from "@/context/AuthContexts";
-
-
 const withAuth = (WrappedComponent) => {
   const AuthenticatedComponent = (props) => {
     const { loggedIn } = useAuth();
@@ -16,8 +14,6 @@ const withAuth = (WrappedComponent) => {
     }
     return <WrappedComponent {...props} />;
   };
-
   return AuthenticatedComponent;
 };
-
 export default withAuth;

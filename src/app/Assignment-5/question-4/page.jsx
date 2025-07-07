@@ -1,21 +1,32 @@
-const { UserData } = require("@/components");
+'use client';
 
+import { useRouter } from "next/navigation";
 
-const getData=async ()=>{
-    const response=await fetch("https://jsonplaceholder.typicode.com/users");
-    const data=await response.json();
-    return data;
-}
+const ProductsPage = () => {
+  const router = useRouter();
 
-const HomePage=async()=>{
-    const userData= await getData(); // here to use data async return promise if we does not use await it will return promise which is an object
-    return(
-        <>
-        <h2> User Tables</h2>
-           <UserData data={userData}/>
-        </>
-    )
+  const handleData = () => {
+    router.push("/Assignment-5/question-4/products/1");
+  };
 
-}
-export default HomePage;
+  const buttonStyle = {
+    marginTop: '20px',
+    padding: '10px 20px',
+    backgroundColor: '#0070f3',
+    color: '#fff',
+    border: 'none',
+    borderRadius: '5px',
+    cursor: 'pointer',
+    fontSize: '16px'
+  };
 
+  return (
+    <div>
+      <button onClick={handleData} style={buttonStyle}>
+        Click me to show Data
+      </button>
+    </div>
+  );
+};
+
+export default ProductsPage;

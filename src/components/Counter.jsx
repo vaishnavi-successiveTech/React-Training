@@ -1,6 +1,6 @@
 "use client"
 import { useState } from "react"
-import withLogger from "./withLogger";
+import withLogger from "../hoc/withLogger";
 const Counter=()=>{
     const [count,setCount]=useState(0);
     const handleClick=()=>{

@@ -1,4 +1,5 @@
-import LoginHOC from "@/components/LoginHOC";
+import { LoginHOC } from "@/components";
+
 
 const Login = () => {
   return (
@@ -9,3 +10,4 @@ const Login = () => {
 };
 
 export default Login;
+

@@ -1,6 +1,7 @@
 "use client";
 
-import { useAuth } from "@/context/AuthContexts";
+
+import { useAuth } from "@/context";
 import { redirect } from "next/navigation";
 import { useState, useEffect } from "react";
 
@@ -20,7 +21,7 @@ const LoginHOC = () => {
   useEffect(() => {
     if (loggedIn && shouldRedirect) {
       
-      redirect("/about");
+      redirect("/Assignment-5/question-14");
     }
   }, [loggedIn, shouldRedirect]);
 
